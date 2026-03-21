@@ -46,6 +46,7 @@ public:
         if (rand() % count == 0) {
             ans = node->val;
         }
+        count++;
         node = node->next;
     }
 
