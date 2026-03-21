@@ -1,65 +1,59 @@
-//review 707
+#include <cstddef>
+#include <cstdlib>
+#include <random>
+#include <vector>
 
-class MyLinkedList {
+struct ListNode {
+  int val;
+  ListNode *next;
+
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+class Solution {
 private:
-  struct Node {
-    Node *next;
-    int val;
-
-    Node(int n): val(n), next(nullptr) {}
-  };
-
-  Node *head;
-  int size = 0;
+  std::vector<int> values;
 
 public:
-  MyLinkedList(): head(new Node(0)), size(0) {}
-  
-  int get(int index) {
-    if (index < 0 || index >= size) {
-      return -1;
+  Solution(ListNode *head) {
+    while (head) {
+      values.push_back(head->val);
+      head = head->next;
     }
-
-    int start = 0;
-    Node *cur = head->next;
-    while (start < index) {
-      cur = cur->next;
-      start++;
-    }
-    return cur->val;
   }
 
-  void addAtHead(int val) { addAtIndex(0, val); }
-
-  void addAtTail(int val) { addAtIndex(size, val); }
-
-  void addAtIndex(int index, int val) {
-    if (index < 0 || index > size) {
-      return;
-    }
-
-    int start = 0;
-    Node *prev = head;
-    while (start < index) {
-      prev = prev->next;
-      start++;
-    }
-    Node *tmp = new Node(val);
-
-    tmp->next = prev->next;
-    prev->next = tmp;
-    size++;
-  }
-
-  void deleteAtIndex(int index) {
-    int start = 0;
-    Node *prev = head;
-    while (start < index) {
-      prev = prev->next;
-      start++;
-    }
-    Node *del = prev->next;
-    prev->next = del->next;
-    del->next = nullptr;
-  }
+  int getRandom() { return values[rand() % values.size()]; }
 };
+
+
+class Solution2 {
+private:
+  ListNode* head;
+
+public:
+  Solution2(ListNode *head) {
+    this->head = head;
+  }
+
+  int getRandom() {
+
+    int ans = 0, count = 1;
+
+    auto node = head;
+    while (node) {
+        if (rand() % count == 0) {
+            ans = node->val;
+        }
+        node = node->next;
+    }
+
+    return ans;
+};
+};
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution* obj = new Solution(head);
+ * int param_1 = obj->getRandom();
+ */
