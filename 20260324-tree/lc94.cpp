@@ -1,8 +1,8 @@
 #include "tree.h"
 #include <cstddef>
+#include <stack>
 #include <vector>
 using namespace std;
-
 
 /**
 中序遍历
@@ -12,16 +12,34 @@ class Solution {
 public:
   void inorderOrder(TreeNode *node, vector<int> &res) {
     if (node == nullptr) {
-        return;
+      return;
     }
+
     inorderOrder(node->left, res);
-    res.emplace_back(node->val);
+    res.push_back(node->val);
     inorderOrder(node->right, res);
   }
-    vector<int> inorderTraversal(TreeNode* root) {
-      vector<int> res;
+  vector<int> inorderTraversal(TreeNode *root) {
+    vector<int> res;
+    inorderOrder(root, res);
 
-      inorderOrder(root, res);
-      return res;
+    return res;
+  }
+
+  vector<int> inorderTraversalWithSk(TreeNode *root) {
+    vector<int> res;
+    stack<TreeNode *> sk;
+    while (root != nullptr || !sk.empty()) {
+      while (root != nullptr) {
+        sk.push(root);
+        root = root->left;
+      }
+      root = sk.top();
+      sk.pop();
+      res.push_back(root->val);
+      root = root->right;
     }
+
+    return res;
+  }
 };
