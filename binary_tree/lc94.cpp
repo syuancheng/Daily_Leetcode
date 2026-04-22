@@ -5,41 +5,47 @@
 using namespace std;
 
 /**
+94. 二叉树的中序遍历
 中序遍历
 左，中，右
 */
 class Solution {
 public:
+  //递归
   void inorderOrder(TreeNode *node, vector<int> &res) {
     if (node == nullptr) {
       return;
     }
-
     inorderOrder(node->left, res);
     res.push_back(node->val);
     inorderOrder(node->right, res);
   }
-  vector<int> inorderTraversal(TreeNode *root) {
-    vector<int> res;
-    inorderOrder(root, res);
 
-    return res;
-  }
-
-  vector<int> inorderTraversalWithSk(TreeNode *root) {
-    vector<int> res;
-    stack<TreeNode *> sk;
-    while (root != nullptr || !sk.empty()) {
-      while (root != nullptr) {
-        sk.push(root);
-        root = root->left;
-      }
-      root = sk.top();
-      sk.pop();
-      res.push_back(root->val);
-      root = root->right;
+  //迭代（stack)
+  void inorderOrder2(TreeNode *node, vector<int> &res) {
+    if (node == nullptr) {
+      return;
     }
 
-    return res;
+    stack<TreeNode *> sk;
+    TreeNode *curr = node;
+
+    while (curr || !sk.empty()) {
+      // 尽可能往左走
+      while (curr) {
+        sk.push(curr);
+        curr = curr->left;
+      }
+
+      // 弹出栈顶，当前节点的最左节点
+      curr = sk.top();
+      sk.pop();
+      res.push_back(curr->val);
+
+      // 转向右子树
+      curr = curr->right;
+    }
+
+    return;
   }
 };
