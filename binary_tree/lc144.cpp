@@ -5,6 +5,12 @@
 
 using namespace std;
 
+
+/**
+144. 二叉树的前序遍历
+中左右
+*/
+
 class Solution {
 public:
   void preOrder(TreeNode *root, vector<int> &res) {
@@ -15,32 +21,33 @@ public:
     preOrder(root->left, res);
     preOrder(root->right, res);
   }
+
   vector<int> preorderTraversal(TreeNode *root) {
     vector<int> ans;
     preOrder(root, ans);
     return ans;
   }
 
-  vector<int> preorderTraversalWithStack(TreeNode *root) {
-    vector<int> ans;
-    stack<TreeNode *> st;
-    if (root) {
-        st.push(root);
+  void preOrder2(TreeNode *root, vector<int> &res) {
+    if (root == nullptr) {
+      return;
     }
+    stack<TreeNode *> sk;
+    sk.push(root);
 
-    while (!st.empty()) {
-      auto cur = st.top();
-      st.pop();
-      ans.push_back(cur->val);
+    while (!sk.empty()) {
+      TreeNode *curr = sk.top();
+      sk.pop();
+      res.push_back(curr->val);
 
-        if (cur->right) {
-            st.push(cur->right);
-        }
-        if (cur->left) {
-            st.push(cur->left);
-        }
+      if (curr->right) {
+        sk.push(curr->right);
+      }
+      if (curr->left) {
+        sk.push(curr->left);
+      }
     }
-    return ans;
+    return;
   }
 
   vector<int> preorderTraversalWithMrios(TreeNode *root) {
