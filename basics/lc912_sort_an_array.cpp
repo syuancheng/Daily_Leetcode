@@ -11,11 +11,8 @@ public:
 };
 
 // 1.快速排序
-int partition(vector<int> &nums, int left, int right) {
+int paratation(vector<int> &nums, int left, int right) {
   int l = left, r = right;
-
-  int randIdx = left + rand() % (right - left + 1);
-  swap(nums[left], nums[randIdx]);
   int base = nums[left];
   while (l < r) {
     while (l < r && nums[r] >= base) {
@@ -26,17 +23,17 @@ int partition(vector<int> &nums, int left, int right) {
     }
     swap(nums[l], nums[r]);
   }
-  swap(nums[l], nums[left]);
+  swap(left, l);
   return l;
 }
 
-void quickSort(vector<int> &nums, int left, int right) {
-  if (left >= right) {
+void quickSort(vector<int> &nums, int s, int t) {
+  if (s >= t) {
     return;
   }
-  int mid = partition(nums, left, right);
-  quickSort(nums, left, mid - 1);
-  quickSort(nums, mid + 1, right);
+  int mid = paratation(nums, s, t);
+  quickSort(nums, s, mid - 1);
+  quickSort(nums, mid + 1, t);
 }
 
 // 2.选择排序，双指针。内循环选择最小的和外循环交换
