@@ -39,15 +39,14 @@ void quickSort(vector<int> &nums, int s, int t) {
 // 2.选择排序，双指针。内循环选择最小的和外循环交换
 void selectionSort(vector<int> &nums) {
   int n = nums.size();
-
-  for (int i = 0; i < n - 1; i++) {
-    int k = i;
-    for (int j = i + 1; j < n; j++) {
-      if (nums[j] < nums[k]) {
-        k = j;
+  for (int i = 0; i < n; i++) {
+    int minIdx = i;
+    for (int j = i+1; j < n; j++) {
+      if (nums[j] < nums[minIdx]) {
+        minIdx = j;
       }
     }
-    swap(nums[i], nums[k]);
+    swap(nums[i], nums[minIdx]);
   }
 }
 
