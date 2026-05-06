@@ -1,6 +1,5 @@
 #include "type.h"
 
-
 class Solution {
 public:
   bool hasCycle(ListNode *head) {
@@ -15,7 +14,6 @@ public:
         return true;
       }
     }
-
     return false;
   }
 };
