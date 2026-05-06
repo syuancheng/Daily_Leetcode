@@ -9,9 +9,8 @@ public:
 
     ListNode *dummy = new ListNode();
     ListNode *curr = head;
-
-    while (curr != nullptr) {
-      auto *tmp = curr->next;
+    while (curr) {
+      ListNode *tmp = curr->next;
 
       curr->next = dummy->next;
       dummy->next = curr;
