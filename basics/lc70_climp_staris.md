@@ -1,0 +1,48 @@
+# 70. Climbing Stairs
+
+## Labels
+
+- Dynamic Programming
+- Math
+
+## Link
+
+https://leetcode.com/problems/climbing-stairs/
+
+## Problem Description
+
+You are climbing a staircase with `n` steps. Each move can climb either 1 or 2 steps. Return the number of distinct ways to reach the top.
+
+## My Solution
+
+```cpp
+
+
+/**
+假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+*/
+
+#include <vector>
+class Solution {
+public:
+  int climbStairs(int n) {
+    if (n == 1 || n == 2) {
+      return n;
+    }
+
+    std::vector<int> dp(n + 1);
+    dp[1] = 1;
+    dp[2] = 2;
+    for (int i = 3; i <= n; i++) {
+      dp[i] = dp[i-1] + dp[i-2];
+    }
+    return dp[n];
+  }
+};
+```
+
+## Complexity
+
+- Time: O(n), where `n` is the number of stairs.
+- Space: O(n), because the DP array stores results for all steps.
