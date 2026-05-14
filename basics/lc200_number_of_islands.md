@@ -6,6 +6,10 @@
 - DFS
 - Matrix
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/number-of-islands/

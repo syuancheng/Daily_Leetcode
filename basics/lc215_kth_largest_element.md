@@ -6,6 +6,10 @@
 - Heap
 - Quickselect
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/kth-largest-element-in-an-array/

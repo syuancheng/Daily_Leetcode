@@ -6,6 +6,10 @@
 - Two Pointers
 - Sorting
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/3sum/

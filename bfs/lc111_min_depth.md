@@ -6,6 +6,10 @@
 - BFS
 - Binary Tree
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/minimum-depth-of-binary-tree/

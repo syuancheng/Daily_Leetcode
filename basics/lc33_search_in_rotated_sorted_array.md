@@ -5,6 +5,10 @@
 - Array
 - Binary Search
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/search-in-rotated-sorted-array/

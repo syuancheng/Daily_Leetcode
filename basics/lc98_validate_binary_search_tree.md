@@ -5,6 +5,10 @@
 - Tree
 - DFS
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/validate-binary-search-tree/

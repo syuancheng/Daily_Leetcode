@@ -5,6 +5,10 @@
 - Hash Table
 - Heap
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/top-k-frequent-elements/

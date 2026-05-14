@@ -6,6 +6,10 @@
 - DFS
 - String
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/

@@ -5,6 +5,10 @@
 - Linked List
 - Recursion
 
+## Mastery
+
+- Mastery: Needs Review (不熟练)
+
 ## Link
 
 https://leetcode.com/problems/merge-two-sorted-lists/
