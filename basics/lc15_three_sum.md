@@ -40,7 +40,8 @@ public:
           res.push_back({nums[i], nums[l], nums[r]});
           l++;
           r--;
-
+          
+          //check same num should when find a sum meet condition
           while (l < r && nums[l] == nums[l - 1]) {
             l++;
           }
