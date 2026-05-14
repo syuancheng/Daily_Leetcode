@@ -6,7 +6,8 @@
 
 ## Mastery
 
-- Mastery: Needs Review (不熟练)
+- Attempts: X
+- Status: Needs Review
 
 ## Link
 

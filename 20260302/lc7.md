@@ -1,5 +1,6 @@
 ## Mastery
 
-- Mastery: Needs Review (不熟练)
+- Attempts: X
+- Status: Needs Review
 
 使用辗转相除法
