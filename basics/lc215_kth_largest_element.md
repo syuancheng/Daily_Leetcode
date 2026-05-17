@@ -85,3 +85,13 @@ public:
 
 - Time: O(n) average for quickselect, or O(n log k) for the heap solution.
 - Space: O(1) extra for quickselect, or O(k) for the heap solution.
+
+## Notes
+
+This problem can be solved with a min-heap that keeps the largest `k` elements seen so far. In C++, that heap is declared as:
+
+```cpp
+priority_queue<int, vector<int>, greater<int>> min_heap;
+```
+
+See also: [C++ `std::priority_queue` Notes](../data_structure_notes/priority_queue.md)
