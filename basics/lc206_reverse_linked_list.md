@@ -6,8 +6,8 @@
 
 ## Mastery
 
-- Attempts: X
-- Status: Needs Review
+- Attempts: OO
+- Status: Proficient
 
 ## Link
 
