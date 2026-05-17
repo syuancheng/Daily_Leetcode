@@ -7,7 +7,7 @@
 
 ## Mastery
 
-- Attempts: X
+- Attempts: XO
 - Status: Needs Review
 
 ## Link
