@@ -5,13 +5,20 @@
 
 using namespace std;
 
+void mergeSort(vector<int> &nums, int left, int right);
+
 class Solution {
 public:
-  vector<int> sortArray(vector<int> &nums) {}
+  vector<int> sortArray(vector<int> &nums) {
+    if (!nums.empty()) {
+      mergeSort(nums, 0, nums.size() - 1);
+    }
+    return nums;
+  }
 };
 
 // 1.快速排序
-int paratation(vector<int> &nums, int left, int right) {
+int partition(vector<int> &nums, int left, int right) {
   int l = left, r = right;
   int base = nums[left];
   while (l < r) {
@@ -23,7 +30,7 @@ int paratation(vector<int> &nums, int left, int right) {
     }
     swap(nums[l], nums[r]);
   }
-  swap(left, l);
+  swap(nums[left], nums[l]);
   return l;
 }
 
@@ -31,7 +38,7 @@ void quickSort(vector<int> &nums, int s, int t) {
   if (s >= t) {
     return;
   }
-  int mid = paratation(nums, s, t);
+  int mid = partition(nums, s, t);
   quickSort(nums, s, mid - 1);
   quickSort(nums, mid + 1, t);
 }
@@ -69,8 +76,8 @@ void merge(vector<int> &nums, int left, int mid, int right) {
     tmp[k++] = nums[j++];
   }
 
-  for (k = 0; k < tmp.size(); k++) {
-    nums[left + k] = tmp[k];
+  for (int idx = 0; idx < k; idx++) {
+    nums[left + idx] = tmp[idx];
   }
 }
 
