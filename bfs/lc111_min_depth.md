@@ -8,8 +8,8 @@
 
 ## Mastery
 
-- Attempts: X
-- Status: Needs Review
+- Attempts: XO
+- Status: Familiar
 
 ## Link
 
