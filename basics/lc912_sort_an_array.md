@@ -127,8 +127,6 @@ void mergeSort(vector<int> &nums, int left, int right) {
   // 合并阶段
   merge(nums, left, mid, right);
 }
-
-int main() { return 0; }
 ```
 
 ## Reference Implementation
