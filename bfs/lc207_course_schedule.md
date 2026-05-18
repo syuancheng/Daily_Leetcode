@@ -8,8 +8,8 @@
 
 ## Mastery
 
-- Attempts: X
-- Status: Needs Review
+- Attempts: XH
+- Status: Beginner
 
 ## Link
 
@@ -34,7 +34,7 @@ public:
     vector<int> inDegree(numCourses, 0);
 
     for (auto &p : prerequisites) {
-      graph[p[1]].push_back(p[0]); // 学完p1才能学p0
+      graph[p[1]].push_back(p[0]); // 学完p1才能学p0  p[0] <- p[1]
       inDegree[p[0]]++;
     }
 
