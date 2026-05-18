@@ -1,96 +1,95 @@
-#include <algorithm>
-#include <cstdlib>
-#include <utility>
 #include <vector>
 
 using namespace std;
 
-void mergeSort(vector<int> &nums, int left, int right);
-
 class Solution {
 public:
   vector<int> sortArray(vector<int> &nums) {
-    if (!nums.empty()) {
-      mergeSort(nums, 0, nums.size() - 1);
-    }
+    // TODO: choose one sorting algorithm to call here
     return nums;
   }
+
+  // 1. 冒泡排序
+  vector<int> bubbleSort(vector<int> &nums) {
+    // TODO: implement bubble sort
+    return nums;
+  }
+
+  // 2. 选择排序
+  vector<int> selectionSort(vector<int> &nums) {
+    // TODO: implement selection sort
+    return nums;
+  }
+
+  // 3. 插入排序
+  vector<int> insertionSort(vector<int> &nums) {
+    // TODO: implement insertion sort
+    return nums;
+  }
+
+  // 4. 希尔排序
+  vector<int> shellSort(vector<int> &nums) {
+    // TODO: implement shell sort
+    return nums;
+  }
+
+  // 5. 归并排序
+  vector<int> mergeSort(vector<int> &nums) {
+    // TODO: implement merge sort
+    return nums;
+  }
+
+  // 6. 快速排序
+  vector<int> quickSort(vector<int> &nums) {
+    // TODO: implement quick sort
+    return nums;
+  }
+
+  // 7. 堆排序
+  vector<int> heapSort(vector<int> &nums) {
+    // TODO: implement heap sort
+    return nums;
+  }
+
+  // 8. 计数排序
+  vector<int> countingSort(vector<int> &nums) {
+    // TODO: implement counting sort
+    return nums;
+  }
+
+  // 9. 桶排序
+  vector<int> bucketSort(vector<int> &nums) {
+    // TODO: implement bucket sort
+    return nums;
+  }
+
+  // 10. 基数排序
+  vector<int> radixSort(vector<int> &nums) {
+    // TODO: implement radix sort
+    return nums;
+  }
+
+private:
+  void mergeSort(vector<int> &nums, int left, int right) {
+    // TODO: implement merge sort recursion
+  }
+
+  void merge(vector<int> &nums, int left, int mid, int right) {
+    // TODO: implement merge helper
+  }
+
+  void quickSort(vector<int> &nums, int left, int right) {
+    // TODO: implement quick sort recursion
+  }
+
+  int partition(vector<int> &nums, int left, int right) {
+    // TODO: implement partition helper
+    return left;
+  }
+
+  void heapify(vector<int> &nums, int heapSize, int root) {
+    // TODO: implement heapify helper
+  }
 };
-
-// 1.快速排序
-int partition(vector<int> &nums, int left, int right) {
-  int l = left, r = right;
-  int base = nums[left];
-  while (l < r) {
-    while (l < r && nums[r] >= base) {
-      r--;
-    }
-    while (l < r && nums[l] <= base) {
-      l++;
-    }
-    swap(nums[l], nums[r]);
-  }
-  swap(nums[left], nums[l]);
-  return l;
-}
-
-void quickSort(vector<int> &nums, int s, int t) {
-  if (s >= t) {
-    return;
-  }
-  int mid = partition(nums, s, t);
-  quickSort(nums, s, mid - 1);
-  quickSort(nums, mid + 1, t);
-}
-
-// 2.选择排序，双指针。内循环选择最小的和外循环交换
-void selectionSort(vector<int> &nums) {
-  int n = nums.size();
-  for (int i = 0; i < n; i++) {
-    int minIdx = i;
-    for (int j = i+1; j < n; j++) {
-      if (nums[j] < nums[minIdx]) {
-        minIdx = j;
-      }
-    }
-    swap(nums[i], nums[minIdx]);
-  }
-}
-
-// 3. 归并排序
-void merge(vector<int> &nums, int left, int mid, int right) {
-  vector<int> tmp(right - left + 1);
-  int i = left, j = mid + 1, k = 0;
-  while (i <= mid && j <= right) {
-    if (nums[i] <= nums[j]) {
-      tmp[k++] = nums[i++];
-
-    } else {
-      tmp[k++] = nums[j++];
-    }
-  }
-  while (i <= mid) {
-    tmp[k++] = nums[i++];
-  }
-  while (j <= right) {
-    tmp[k++] = nums[j++];
-  }
-
-  for (int idx = 0; idx < k; idx++) {
-    nums[left + idx] = tmp[idx];
-  }
-}
-
-void mergeSort(vector<int> &nums, int left, int right) {
-  if (left >= right) {
-    return;
-  }
-  int mid = left + (right - left) / 2;
-  mergeSort(nums, left, mid);
-  mergeSort(nums, mid + 1, right);
-
-  // 合并阶段
-  merge(nums, left, mid, right);
-}
 
 int main() { return 0; }
