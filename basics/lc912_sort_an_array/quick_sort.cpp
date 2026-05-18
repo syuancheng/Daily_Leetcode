@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <utility>
 #include <vector>
 
@@ -24,9 +25,12 @@ private:
   }
 
   int partition(vector<int> &nums, int left, int right) {
+    int randIdx = left + rand() % (right - left + 1);
+
+    swap(nums[randIdx], nums[left]);
     int base = nums[left];
-    int l = left;
-    int r = right;
+    int l = left, r = right;
+
     while (l < r) {
       while (l < r && nums[r] >= base) {
         --r;
