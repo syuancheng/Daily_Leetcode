@@ -5,6 +5,11 @@
 - Array
 - Sorting
 
+## Mastery
+
+- Attempts: OO
+- Status: Proficient
+
 ## Link
 
 https://leetcode.com/problems/sort-an-array/

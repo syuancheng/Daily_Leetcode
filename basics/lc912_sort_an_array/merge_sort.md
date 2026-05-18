@@ -6,6 +6,11 @@
 - Sorting
 - Divide and Conquer
 
+## Mastery
+
+- Attempts: XX
+- Status: Beginner
+
 ## Link
 
 https://leetcode.com/problems/sort-an-array/
