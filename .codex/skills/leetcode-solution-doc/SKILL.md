@@ -50,7 +50,7 @@ Write the document in English with this structure:
 
 ## Mastery
 
-- Attempts: <sequence of X/O attempts, e.g. XX, XO, OO>
+- Attempts: <sequence of X/H/O attempts, e.g. XX, XH, HO, OO>
 - Status: <Beginner | Familiar | Proficient>
 
 ## Link
@@ -81,6 +81,6 @@ Adapt headings only when the user asks for a different format.
 - Use clear, natural English.
 - Prefer concise problem descriptions over copying a long copyrighted statement verbatim.
 - Include a `Labels` section with the problem's algorithm/data-structure topics, such as `Array`, `Hash Table`, `Two Pointers`, `Binary Search`, `Dynamic Programming`, `Linked List`, `Tree`, `Graph`, `BFS`, `DFS`, `Backtracking`, `Stack`, `Queue`, `Heap`, `Greedy`, or `Sliding Window`.
-- Include a `Mastery` section after `Labels`. In `Attempts`, `X` means the attempt was incorrect and `O` means the attempt was fully correct. Use only these `Status` values: `Beginner`, `Familiar`, or `Proficient`.
+- Include a `Mastery` section after `Labels`. In `Attempts`, `X` means the attempt was incorrect, `H` means the solution was completed with an answer, hint, or GPT guidance and the user understood it, and `O` means the attempt was fully correct without help. Use only these `Status` values: `Beginner`, `Familiar`, or `Proficient`.
 - Preserve the user's code exactly in the Markdown `My Solution` section before clearing the source file.
 - Include only time and space complexity after `My Solution`, unless the user explicitly asks for review or corrected code.
