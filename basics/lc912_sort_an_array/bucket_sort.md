@@ -1,10 +1,9 @@
-# 912. Sort an Array - Heap Sort
+# 912. Sort an Array - Bucket Sort
 
 ## Labels
 
 - Array
 - Sorting
-- Heap
 
 ## Link
 
@@ -16,9 +15,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_heap_sort.cpp`.
+See `bucket_sort.cpp`.
 
 ## Complexity
 
-- Time: O(n log n)
-- Space: O(1)
+- Time: TODO
+- Space: TODO

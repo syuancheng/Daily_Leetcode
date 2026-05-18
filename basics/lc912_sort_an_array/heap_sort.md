@@ -1,10 +1,10 @@
-# 912. Sort an Array - Merge Sort
+# 912. Sort an Array - Heap Sort
 
 ## Labels
 
 - Array
 - Sorting
-- Divide and Conquer
+- Heap
 
 ## Link
 
@@ -16,9 +16,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_merge_sort.cpp`.
+See `heap_sort.cpp`.
 
 ## Complexity
 
 - Time: O(n log n)
-- Space: O(n)
+- Space: O(1)

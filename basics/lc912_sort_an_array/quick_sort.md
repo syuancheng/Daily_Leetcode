@@ -1,9 +1,10 @@
-# 912. Sort an Array - Insertion Sort
+# 912. Sort an Array - Quick Sort
 
 ## Labels
 
 - Array
 - Sorting
+- Divide and Conquer
 
 ## Link
 
@@ -15,9 +16,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_insertion_sort.cpp`.
+See `quick_sort.cpp`.
 
 ## Complexity
 
-- Time: O(n^2)
-- Space: O(1)
+- Time: O(n log n) average, O(n^2) worst case
+- Space: O(log n) average recursion depth

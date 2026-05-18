@@ -1,4 +1,4 @@
-# 912. Sort an Array - Selection Sort
+# 912. Sort an Array - Insertion Sort
 
 ## Labels
 
@@ -15,7 +15,7 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_selection_sort.cpp`.
+See `insertion_sort.cpp`.
 
 ## Complexity
 

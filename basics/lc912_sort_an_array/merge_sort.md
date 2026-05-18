@@ -1,9 +1,10 @@
-# 912. Sort an Array - Shell Sort
+# 912. Sort an Array - Merge Sort
 
 ## Labels
 
 - Array
 - Sorting
+- Divide and Conquer
 
 ## Link
 
@@ -15,9 +16,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_shell_sort.cpp`.
+See `merge_sort.cpp`.
 
 ## Complexity
 
-- Time: TODO
-- Space: TODO
+- Time: O(n log n)
+- Space: O(n)

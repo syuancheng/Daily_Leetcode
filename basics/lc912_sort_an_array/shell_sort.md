@@ -1,4 +1,4 @@
-# 912. Sort an Array - Bubble Sort
+# 912. Sort an Array - Shell Sort
 
 ## Labels
 
@@ -15,9 +15,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_bubble_sort.cpp`.
+See `shell_sort.cpp`.
 
 ## Complexity
 
-- Time: O(n^2)
-- Space: O(1)
+- Time: TODO
+- Space: TODO

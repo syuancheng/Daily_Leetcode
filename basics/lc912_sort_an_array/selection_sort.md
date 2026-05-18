@@ -1,4 +1,4 @@
-# 912. Sort an Array - Radix Sort
+# 912. Sort an Array - Selection Sort
 
 ## Labels
 
@@ -15,9 +15,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_radix_sort.cpp`.
+See `selection_sort.cpp`.
 
 ## Complexity
 
-- Time: O(d * (n + b)), where `d` is digit count and `b` is the base
-- Space: O(n + b)
+- Time: O(n^2)
+- Space: O(1)

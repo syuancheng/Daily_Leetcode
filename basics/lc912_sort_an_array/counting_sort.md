@@ -1,10 +1,10 @@
-# 912. Sort an Array - Quick Sort
+# 912. Sort an Array - Counting Sort
 
 ## Labels
 
 - Array
 - Sorting
-- Divide and Conquer
+- Counting
 
 ## Link
 
@@ -16,9 +16,9 @@ Given an integer array `nums`, return the array sorted in ascending order.
 
 ## My Solution
 
-See `lc912_sort_an_array_quick_sort.cpp`.
+See `counting_sort.cpp`.
 
 ## Complexity
 
-- Time: O(n log n) average, O(n^2) worst case
-- Space: O(log n) average recursion depth
+- Time: O(n + k), where `k` is the value range
+- Space: O(k)
