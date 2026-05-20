@@ -8,8 +8,8 @@
 
 ## Mastery
 
-- Attempts: X
-- Status: Needs Review
+- Attempts: XH
+- Status: Familiar
 
 ## Link
 
@@ -60,8 +60,7 @@ public:
           for (int k = 0; k < 4; k++) {
             int nx = x + dx[k];
             int ny = y + dy[k];
-            if (nx >= 0 && nx < rows && ny >= 0 && ny < cols &&
-                grid[nx][ny] == '1') {
+            if (nx >= 0 && nx < rows && ny >= 0 && ny < cols && grid[nx][ny] == '1') {
               grid[nx][ny] = '0';
               queue.push({nx, ny});
             }
