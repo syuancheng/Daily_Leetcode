@@ -39,13 +39,15 @@ int main() {
 
   std::vector<bthread_t> tids(kWorkerCount);
   std::vector<WorkerArg> args(kWorkerCount);
+  bthread_attr_t attr = BTHREAD_ATTR_NORMAL;
+  bthread_attr_set_name(&attr, "demo_worker");
   int started = 0;
 
   for (int i = 0; i < kWorkerCount; ++i) {
     args[i] = WorkerArg{i, kRepeat, &state};
 
     const int rc =
-        bthread_start_background(&tids[i], nullptr, worker, &args[i]);
+        bthread_start_background(&tids[i], &attr, worker, &args[i]);
     if (rc != 0) {
       std::cerr << "failed to start bthread " << i << ", error = " << rc
                 << '\n';
