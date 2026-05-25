@@ -1,23 +1,28 @@
 #include <atomic>
-#include <butil/atomicops.h>
 #include <cstddef>
 #include <cstdint>
-#include <unordered_map>
 #include <vector>
 
 class Node {
+private:
+  std::vector<Node *> _ouput_nodes;
 
-  std::vector<Node *> input_nodes;
-  std::vector<Node *> ouput_nodes;
+  std::atomic<int32_t> _inDegree{0};
 
-  butil::atomic<int32_t> inDegree{0};
+public:
+  size_t getOutdegree() const { return _ouput_nodes.size(); };
 
-  size_t getIndegree() const { return input_nodes.size(); }
-  size_t getOutdegree() const { return ouput_nodes.size(); };
+  int inDegree() { return _inDegree; }
+
+  void precede(Node *n) { // a.precede(b) a -> b
+    this->_ouput_nodes.emplace_back(n);
+    n->_inDegree.fetch_add(1); //
+  }
 };
 
 class Graph {
-  std::unordered_map<Node *, std::vector<Node *>>
-      graph; // key: node, value: nodes rely on this node
-  std::unordered_map<Node *, int> inDegrees;
+private:
+  std::vector<Node *> _nodes; // key: node, value: nodes rely on this node
+public:
+  std::vector<Node *> get_nodes() { return this->_nodes; }
 };
