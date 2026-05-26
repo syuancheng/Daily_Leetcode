@@ -1,7 +1,0 @@
-interface:
-  display_name: "LeetCode Solution Doc"
-  short_description: "Create English LeetCode writeups"
-  default_prompt: "Use $leetcode-solution-doc to create an English Markdown writeup for this LeetCode problem and review my solution."
-
-policy:
-  allow_implicit_invocation: true
