@@ -1,28 +1,131 @@
 # Daily_Leetcode
 
-## 题解索引
+## Problem Index
 
-### 按日期
+Problems are grouped by primary topic under `problems/`. Duplicate problem files from date/topic folders have been consolidated into one canonical location. Solved problems have Markdown writeups; unfinished templates are listed as in progress.
 
-- `20260302`: [lc7.cpp](20260302/lc7.cpp), [lc7.md](20260302/lc7.md)
-- `20260304`: [lc66.cpp](20260304/lc66.cpp)
-- `20260307`: [lc1.js](20260307/lc1.js), [lc1.ts](20260307/lc1.ts), [lc1588.cpp](20260307/lc1588.cpp), [lc27.cpp](20260307/lc27.cpp), [lc933.cpp](20260307/lc933.cpp)
-- `20260315`: [lc26.cpp](20260315/lc26.cpp), [lc26.js](20260315/lc26.js), [lc67.cpp](20260315/lc67.cpp), [lc80.cpp](20260315/lc80.cpp)
-- `20260316`: [lc4.cpp](20260316/lc4.cpp), [lc88.cpp](20260316/lc88.cpp), [lc88.js](20260316/lc88.js)
-- `20260321`: [lc147.cpp](20260321/lc147.cpp), [lc203.cpp](20260321/lc203.cpp), [lc237.cpp](20260321/lc237.cpp), [lc24.cpp](20260321/lc24.cpp), [lc328.cpp](20260321/lc328.cpp), [lc725.cpp](20260321/lc725.cpp), [lc86.cpp](20260321/lc86.cpp), [lc876.cpp](20260321/lc876.cpp), [lc92.cpp](20260321/lc92.cpp)
-- `20260328`: [lc20.cpp](20260328/lc20.cpp), [lc20.js](20260328/lc20.js), [lc238.cpp](20260328/lc238.cpp), [lc238.js](20260328/lc238.js), [lc3.js](20260328/lc3.js)
-- `20260329`: [2704.js](20260329/2704.js), [lc11.cpp](20260329/lc11.cpp), [lc11.js](20260329/lc11.js), [lc242.cpp](20260329/lc242.cpp), [lc242.js](20260329/lc242.js), [lc2620.js](20260329/lc2620.js), [lc2665.js](20260329/lc2665.js), [lc2667.js](20260329/lc2667.js), [lc2721.js](20260329/lc2721.js), [lc2723.js](20260329/lc2723.js), [lc283.cpp](20260329/lc283.cpp)
-- `20260401`: [lc104.cpp](20260401/lc104.cpp), [lc74.cpp](20260401/lc74.cpp)
 
-### 按专题
+### Array & Hashing
 
-- `back_tracking`: [lc77.cpp](back_tracking/lc77.cpp)
-- `basics`: [lc102_binary_tree_level_traversal.cpp](basics/lc102_binary_tree_level_traversal.cpp), [lc102_binary_tree_level_traversal.md](basics/lc102_binary_tree_level_traversal.md), [lc141_linked_list_cycle.cpp](basics/lc141_linked_list_cycle.cpp), [lc141_linked_list_cycle.md](basics/lc141_linked_list_cycle.md), [lc146_lru_cache.cpp](basics/lc146_lru_cache.cpp), [lc15_three_sum.cpp](basics/lc15_three_sum.cpp), [lc15_three_sum.md](basics/lc15_three_sum.md), [lc167_two_sum_ii.cpp](basics/lc167_two_sum_ii.cpp), [lc167_two_sum_ii.md](basics/lc167_two_sum_ii.md), [lc179_largest_num.cpp](basics/lc179_largest_num.cpp), [lc179_largest_num.md](basics/lc179_largest_num.md), [lc1_two_sum.cpp](basics/lc1_two_sum.cpp), [lc1_two_sum.md](basics/lc1_two_sum.md), [lc200_number_of_islands.cpp](basics/lc200_number_of_islands.cpp), [lc200_number_of_islands.md](basics/lc200_number_of_islands.md), [lc206_reverse_linked_list.cpp](basics/lc206_reverse_linked_list.cpp), [lc206_reverse_linked_list.md](basics/lc206_reverse_linked_list.md), [lc215_kth_largest_element.cpp](basics/lc215_kth_largest_element.cpp), [lc215_kth_largest_element.md](basics/lc215_kth_largest_element.md), [lc21_merge_two_sorted_lists.cpp](basics/lc21_merge_two_sorted_lists.cpp), [lc21_merge_two_sorted_lists.md](basics/lc21_merge_two_sorted_lists.md), [lc236_lowest_common_ancestor.cpp](basics/lc236_lowest_common_ancestor.cpp), [lc23_merge_k_sorted_lists.cpp](basics/lc23_merge_k_sorted_lists.cpp), [lc297_serialize_and_deserialize_binary_tree.cpp](basics/lc297_serialize_and_deserialize_binary_tree.cpp), [lc297_serialize_and_deserialize_binary_tree.md](basics/lc297_serialize_and_deserialize_binary_tree.md), [lc322_coin_change.cpp](basics/lc322_coin_change.cpp), [lc33_search_in_rotated_sorted_array.cpp](basics/lc33_search_in_rotated_sorted_array.cpp), [lc33_search_in_rotated_sorted_array.md](basics/lc33_search_in_rotated_sorted_array.md), [lc347_topk_frequent_elements.cpp](basics/lc347_topk_frequent_elements.cpp), [lc347_topk_frequent_elements.md](basics/lc347_topk_frequent_elements.md), [lc34_find_first_and_last_position.cpp](basics/lc34_find_first_and_last_position.cpp), [lc34_find_first_and_last_position.md](basics/lc34_find_first_and_last_position.md), [lc371_sum_of_two_integers.cpp](basics/lc371_sum_of_two_integers.cpp), [lc371_sum_of_two_integers.md](basics/lc371_sum_of_two_integers.md), [lc42_trapping_rain_water.cpp](basics/lc42_trapping_rain_water.cpp), [lc53_max_subarray.cpp](basics/lc53_max_subarray.cpp), [lc53_max_subarray.md](basics/lc53_max_subarray.md), [lc704_binary_search.cpp](basics/lc704_binary_search.cpp), [lc704_binary_search.md](basics/lc704_binary_search.md), [lc70_climp_staris.cpp](basics/lc70_climp_staris.cpp), [lc70_climp_staris.md](basics/lc70_climp_staris.md), [lc912_sort_an_array.cpp](basics/lc912_sort_an_array.cpp), [lc98_validate_binary_search_tree.cpp](basics/lc98_validate_binary_search_tree.cpp), [lc98_validate_binary_search_tree.md](basics/lc98_validate_binary_search_tree.md)
-- `bfs`: [lc102_level_order.cpp](bfs/lc102_level_order.cpp), [lc111_min_depth.cpp](bfs/lc111_min_depth.cpp), [lc127_ladder_length.cpp](bfs/lc127_ladder_length.cpp), [lc200_number_of_islands.cpp](bfs/lc200_number_of_islands.cpp), [lc207_can_finish.cpp](bfs/lc207_can_finish.cpp), [lc994_organs_rotting.cpp](bfs/lc994_organs_rotting.cpp)
-- `binary_search`: [lc153.cpp](binary_search/lc153.cpp), [lc33.cpp](binary_search/lc33.cpp), [lc34.cpp](binary_search/lc34.cpp), [lc35.cpp](binary_search/lc35.cpp), [lc704.cpp](binary_search/lc704.cpp)
-- `binary_tree`: [lc144.cpp](binary_tree/lc144.cpp), [lc145.cpp](binary_tree/lc145.cpp), [lc94.cpp](binary_tree/lc94.cpp)
-- `double_pointer`: [lc1.cpp](double_pointer/lc1.cpp), [lc15.cpp](double_pointer/lc15.cpp), [lc167.cpp](double_pointer/lc167.cpp)
-- `link_list`: [lc141.cpp](link_list/lc141.cpp), [lc143.cpp](link_list/lc143.cpp), [lc148.cpp](link_list/lc148.cpp), [lc160.cpp](link_list/lc160.cpp), [lc206.cpp](link_list/lc206.cpp), [lc234.cpp](link_list/lc234.cpp), [lc382.cpp](link_list/lc382.cpp), [lc707.cpp](link_list/lc707.cpp)
-- `sliding_window`: [lc3.cpp](sliding_window/lc3.cpp), [lc42.cpp](sliding_window/lc42.cpp), [lc438.cpp](sliding_window/lc438.cpp), [lc567.cpp](sliding_window/lc567.cpp), [lc76.cpp](sliding_window/lc76.cpp)
-- `sort`: [lc912.cpp](sort/lc912.cpp)
-- `two_sum`: [lc2.cpp](two_sum/lc2.cpp), [lc415.cpp](two_sum/lc415.cpp)
+- [1. Two Sum](problems/array_hashing/lc0001_two_sum.md) - [lc0001_two_sum.cpp](problems/array_hashing/lc0001_two_sum.cpp)
+- [26. Remove Duplicates from Sorted Array](problems/array_hashing/lc0026_remove_duplicates_from_sorted_array.md) - [lc0026_remove_duplicates_from_sorted_array.cpp](problems/array_hashing/lc0026_remove_duplicates_from_sorted_array.cpp)
+- [27. Remove Element](problems/array_hashing/lc0027_remove_element.md) - [lc0027_remove_element.cpp](problems/array_hashing/lc0027_remove_element.cpp)
+- [66. Plus One](problems/array_hashing/lc0066_plus_one.md) - [lc0066_plus_one.cpp](problems/array_hashing/lc0066_plus_one.cpp)
+- [88. Merge Sorted Array](problems/array_hashing/lc0088_merge_sorted_array.md) - [lc0088_merge_sorted_array.cpp](problems/array_hashing/lc0088_merge_sorted_array.cpp)
+- [238. Product of Array Except Self](problems/array_hashing/lc0238_product_of_array_except_self.md) - [lc0238_product_of_array_except_self.cpp](problems/array_hashing/lc0238_product_of_array_except_self.cpp)
+- [242. Valid Anagram](problems/array_hashing/lc0242_valid_anagram.md) - [lc0242_valid_anagram.cpp](problems/array_hashing/lc0242_valid_anagram.cpp)
+- [283. Move Zeroes](problems/array_hashing/lc0283_move_zeroes.md) - [lc0283_move_zeroes.cpp](problems/array_hashing/lc0283_move_zeroes.cpp)
+- [1588. Sum of All Odd Length Subarrays](problems/array_hashing/lc1588_sum_of_all_odd_length_subarrays.md) - [lc1588_sum_of_all_odd_length_subarrays.cpp](problems/array_hashing/lc1588_sum_of_all_odd_length_subarrays.cpp)
+
+### Backtracking
+
+- [46. Permutations](problems/backtracking/lc0046_permutations.md) - [lc0046_permutations.cpp](problems/backtracking/lc0046_permutations.cpp)
+- [77. Combinations](problems/backtracking/lc0077_combinations.md) - [lc0077_combinations.cpp](problems/backtracking/lc0077_combinations.cpp)
+
+### Binary Search
+
+- [4. Median of Two Sorted Arrays](problems/binary_search/lc0004_median_of_two_sorted_arrays.md) - [lc0004_median_of_two_sorted_arrays.cpp](problems/binary_search/lc0004_median_of_two_sorted_arrays.cpp)
+- [33. Search in Rotated Sorted Array](problems/binary_search/lc0033_search_in_rotated_sorted_array.md) - [lc0033_search_in_rotated_sorted_array.cpp](problems/binary_search/lc0033_search_in_rotated_sorted_array.cpp)
+- [34. Find First and Last Position of Element in Sorted Array](problems/binary_search/lc0034_find_first_and_last_position_of_element_in_sorted_array.md) - [lc0034_find_first_and_last_position_of_element_in_sorted_array.cpp](problems/binary_search/lc0034_find_first_and_last_position_of_element_in_sorted_array.cpp)
+- [35. Search Insert Position](problems/binary_search/lc0035_search_insert_position.md) - [lc0035_search_insert_position.cpp](problems/binary_search/lc0035_search_insert_position.cpp)
+- [74. Search a 2D Matrix](problems/binary_search/lc0074_search_a_2d_matrix.md) - [lc0074_search_a_2d_matrix.cpp](problems/binary_search/lc0074_search_a_2d_matrix.cpp)
+- [153. Find Minimum in Rotated Sorted Array](problems/binary_search/lc0153_find_minimum_in_rotated_sorted_array.md) - [lc0153_find_minimum_in_rotated_sorted_array.cpp](problems/binary_search/lc0153_find_minimum_in_rotated_sorted_array.cpp)
+- [704. Binary Search](problems/binary_search/lc0704_binary_search.md) - [lc0704_binary_search.cpp](problems/binary_search/lc0704_binary_search.cpp)
+
+### Design
+
+- [146. LRU Cache](problems/design/lc0146_lru_cache.md) - [lc0146_lru_cache.cpp](problems/design/lc0146_lru_cache.cpp)
+
+### Dynamic Programming
+
+- [53. Maximum Subarray](problems/dynamic_programming/lc0053_maximum_subarray.md) - [lc0053_maximum_subarray.cpp](problems/dynamic_programming/lc0053_maximum_subarray.cpp)
+- [70. Climbing Stairs](problems/dynamic_programming/lc0070_climbing_stairs.md) - [lc0070_climbing_stairs.cpp](problems/dynamic_programming/lc0070_climbing_stairs.cpp)
+- In progress: [lc0322_coin_change.cpp](problems/dynamic_programming/lc0322_coin_change.cpp)
+
+### Graph / BFS / DFS
+
+- [127. Word Ladder](problems/graph_bfs_dfs/lc0127_word_ladder.md) - [lc0127_word_ladder.cpp](problems/graph_bfs_dfs/lc0127_word_ladder.cpp)
+- [200. Number of Islands](problems/graph_bfs_dfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/graph_bfs_dfs/lc0200_number_of_islands.cpp)
+- [207. Course Schedule](problems/graph_bfs_dfs/lc0207_course_schedule.md) - [lc0207_course_schedule.cpp](problems/graph_bfs_dfs/lc0207_course_schedule.cpp)
+- [994. Rotting Oranges](problems/graph_bfs_dfs/lc0994_rotting_oranges.md) - [lc0994_rotting_oranges.cpp](problems/graph_bfs_dfs/lc0994_rotting_oranges.cpp)
+
+### JavaScript Basics
+
+- [2620. Counter](problems/js_basics/lc2620_counter.md) - [lc2620_counter.js](problems/js_basics/lc2620_counter.js)
+- [2665. Counter II](problems/js_basics/lc2665_counter_ii.md) - [lc2665_counter_ii.js](problems/js_basics/lc2665_counter_ii.js)
+- [2667. Create Hello World Function](problems/js_basics/lc2667_create_hello_world_function.md) - [lc2667_create_hello_world_function.js](problems/js_basics/lc2667_create_hello_world_function.js)
+- [2704. To Be Or Not To Be](problems/js_basics/lc2704_to_be_or_not_to_be.md) - [lc2704_to_be_or_not_to_be.js](problems/js_basics/lc2704_to_be_or_not_to_be.js)
+- [2721. Execute Asynchronous Functions in Parallel](problems/js_basics/lc2721_execute_asynchronous_functions_in_parallel.md) - [lc2721_execute_asynchronous_functions_in_parallel.js](problems/js_basics/lc2721_execute_asynchronous_functions_in_parallel.js)
+- [2723. Add Two Promises](problems/js_basics/lc2723_add_two_promises.md) - [lc2723_add_two_promises.js](problems/js_basics/lc2723_add_two_promises.js)
+
+### Linked List
+
+- [2. Add Two Numbers](problems/linked_list/lc0002_add_two_numbers.md) - [lc0002_add_two_numbers.cpp](problems/linked_list/lc0002_add_two_numbers.cpp)
+- [21. Merge Two Sorted Lists](problems/linked_list/lc0021_merge_two_sorted_lists.md) - [lc0021_merge_two_sorted_lists.cpp](problems/linked_list/lc0021_merge_two_sorted_lists.cpp)
+- [24. Swap Nodes in Pairs](problems/linked_list/lc0024_swap_nodes_in_pairs.md) - [lc0024_swap_nodes_in_pairs.cpp](problems/linked_list/lc0024_swap_nodes_in_pairs.cpp)
+- [86. Partition List](problems/linked_list/lc0086_partition_list.md) - [lc0086_partition_list.cpp](problems/linked_list/lc0086_partition_list.cpp)
+- [92. Reverse Linked List II](problems/linked_list/lc0092_reverse_linked_list_ii.md) - [lc0092_reverse_linked_list_ii.cpp](problems/linked_list/lc0092_reverse_linked_list_ii.cpp)
+- [141. Linked List Cycle](problems/linked_list/lc0141_linked_list_cycle.md) - [lc0141_linked_list_cycle.cpp](problems/linked_list/lc0141_linked_list_cycle.cpp)
+- [143. Reorder List](problems/linked_list/lc0143_reorder_list.md) - [lc0143_reorder_list.cpp](problems/linked_list/lc0143_reorder_list.cpp)
+- [147. Insertion Sort List](problems/linked_list/lc0147_insertion_sort_list.md) - [lc0147_insertion_sort_list.cpp](problems/linked_list/lc0147_insertion_sort_list.cpp)
+- [148. Sort List](problems/linked_list/lc0148_sort_list.md) - [lc0148_sort_list.cpp](problems/linked_list/lc0148_sort_list.cpp)
+- [160. Intersection of Two Linked Lists](problems/linked_list/lc0160_intersection_of_two_linked_lists.md) - [lc0160_intersection_of_two_linked_lists.cpp](problems/linked_list/lc0160_intersection_of_two_linked_lists.cpp)
+- [203. Remove Linked List Elements](problems/linked_list/lc0203_remove_linked_list_elements.md) - [lc0203_remove_linked_list_elements.cpp](problems/linked_list/lc0203_remove_linked_list_elements.cpp)
+- [206. Reverse Linked List](problems/linked_list/lc0206_reverse_linked_list.md) - [lc0206_reverse_linked_list.cpp](problems/linked_list/lc0206_reverse_linked_list.cpp)
+- [234. Palindrome Linked List](problems/linked_list/lc0234_palindrome_linked_list.md) - [lc0234_palindrome_linked_list.cpp](problems/linked_list/lc0234_palindrome_linked_list.cpp)
+- [237. Delete Node in a Linked List](problems/linked_list/lc0237_delete_node_in_a_linked_list.md) - [lc0237_delete_node_in_a_linked_list.cpp](problems/linked_list/lc0237_delete_node_in_a_linked_list.cpp)
+- [328. Odd Even Linked List](problems/linked_list/lc0328_odd_even_linked_list.md) - [lc0328_odd_even_linked_list.cpp](problems/linked_list/lc0328_odd_even_linked_list.cpp)
+- [382. Linked List Random Node](problems/linked_list/lc0382_linked_list_random_node.md) - [lc0382_linked_list_random_node.cpp](problems/linked_list/lc0382_linked_list_random_node.cpp)
+- [707. Design Linked List](problems/linked_list/lc0707_design_linked_list.md) - [lc0707_design_linked_list.cpp](problems/linked_list/lc0707_design_linked_list.cpp)
+- [725. Split Linked List in Parts](problems/linked_list/lc0725_split_linked_list_in_parts.md) - [lc0725_split_linked_list_in_parts.cpp](problems/linked_list/lc0725_split_linked_list_in_parts.cpp)
+- [876. Middle of the Linked List](problems/linked_list/lc0876_middle_of_the_linked_list.md) - [lc0876_middle_of_the_linked_list.cpp](problems/linked_list/lc0876_middle_of_the_linked_list.cpp)
+- In progress: [lc0023_merge_k_sorted_lists.cpp](problems/linked_list/lc0023_merge_k_sorted_lists.cpp)
+
+### Math / Bit Manipulation
+
+- [7. Reverse Integer](problems/math_bit/lc0007_reverse_integer.md) - [lc0007_reverse_integer.cpp](problems/math_bit/lc0007_reverse_integer.cpp)
+- [67. Add Binary](problems/math_bit/lc0067_add_binary.md) - [lc0067_add_binary.cpp](problems/math_bit/lc0067_add_binary.cpp)
+- [371. Sum of Two Integers](problems/math_bit/lc0371_sum_of_two_integers.md) - [lc0371_sum_of_two_integers.cpp](problems/math_bit/lc0371_sum_of_two_integers.cpp)
+- [415. Add Strings](problems/math_bit/lc0415_add_strings.md) - [lc0415_add_strings.cpp](problems/math_bit/lc0415_add_strings.cpp)
+
+### Sliding Window
+
+- [3. Longest Substring Without Repeating Characters](problems/sliding_window/lc0003_longest_substring_without_repeating_characters.md) - [lc0003_longest_substring_without_repeating_characters.cpp](problems/sliding_window/lc0003_longest_substring_without_repeating_characters.cpp)
+- [76. Minimum Window Substring](problems/sliding_window/lc0076_minimum_window_substring.md) - [lc0076_minimum_window_substring.cpp](problems/sliding_window/lc0076_minimum_window_substring.cpp)
+- [438. Find All Anagrams in a String](problems/sliding_window/lc0438_find_all_anagrams_in_a_string.md) - [lc0438_find_all_anagrams_in_a_string.cpp](problems/sliding_window/lc0438_find_all_anagrams_in_a_string.cpp)
+- [567. Permutation in String](problems/sliding_window/lc0567_permutation_in_string.md) - [lc0567_permutation_in_string.cpp](problems/sliding_window/lc0567_permutation_in_string.cpp)
+
+### Sorting / Heap
+
+- [179. Largest Number](problems/sorting_heap/lc0179_largest_number.md) - [lc0179_largest_number.cpp](problems/sorting_heap/lc0179_largest_number.cpp)
+- [215. Kth Largest Element in an Array](problems/sorting_heap/lc0215_kth_largest_element_in_an_array.md) - [lc0215_kth_largest_element_in_an_array.cpp](problems/sorting_heap/lc0215_kth_largest_element_in_an_array.cpp)
+- [347. Top K Frequent Elements](problems/sorting_heap/lc0347_top_k_frequent_elements.md) - [lc0347_top_k_frequent_elements.cpp](problems/sorting_heap/lc0347_top_k_frequent_elements.cpp)
+- [912. Sort an Array](problems/sorting_heap/lc0912_sort_an_array.md)
+
+### Stack / Queue
+
+- [20. Valid Parentheses](problems/stack_queue/lc0020_valid_parentheses.md) - [lc0020_valid_parentheses.cpp](problems/stack_queue/lc0020_valid_parentheses.cpp)
+- [933. Number of Recent Calls](problems/stack_queue/lc0933_number_of_recent_calls.md) - [lc0933_number_of_recent_calls.cpp](problems/stack_queue/lc0933_number_of_recent_calls.cpp)
+
+### Tree
+
+- [94. Binary Tree Inorder Traversal](problems/tree/lc0094_binary_tree_inorder_traversal.md) - [lc0094_binary_tree_inorder_traversal.cpp](problems/tree/lc0094_binary_tree_inorder_traversal.cpp)
+- [98. Validate Binary Search Tree](problems/tree/lc0098_validate_binary_search_tree.md) - [lc0098_validate_binary_search_tree.cpp](problems/tree/lc0098_validate_binary_search_tree.cpp)
+- [102. Binary Tree Level Order Traversal](problems/tree/lc0102_binary_tree_level_order_traversal.md) - [lc0102_binary_tree_level_order_traversal.cpp](problems/tree/lc0102_binary_tree_level_order_traversal.cpp)
+- [104. Maximum Depth of Binary Tree](problems/tree/lc0104_maximum_depth_of_binary_tree.md) - [lc0104_maximum_depth_of_binary_tree.cpp](problems/tree/lc0104_maximum_depth_of_binary_tree.cpp)
+- [111. Minimum Depth of Binary Tree](problems/tree/lc0111_minimum_depth_of_binary_tree.md) - [lc0111_minimum_depth_of_binary_tree.cpp](problems/tree/lc0111_minimum_depth_of_binary_tree.cpp)
+- [112. Path Sum](problems/tree/lc0112_path_sum.md) - [lc0112_path_sum.cpp](problems/tree/lc0112_path_sum.cpp)
+- [144. Binary Tree Preorder Traversal](problems/tree/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/tree/lc0144_binary_tree_preorder_traversal.cpp)
+- [145. Binary Tree Postorder Traversal](problems/tree/lc0145_binary_tree_postorder_traversal.md) - [lc0145_binary_tree_postorder_traversal.cpp](problems/tree/lc0145_binary_tree_postorder_traversal.cpp)
+- [297. Serialize and Deserialize Binary Tree](problems/tree/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/tree/lc0297_serialize_and_deserialize_binary_tree.cpp)
+- [543. Diameter of Binary Tree](problems/tree/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/tree/lc0543_diameter_of_binary_tree.cpp)
+- In progress: [lc0113_path_sum_ii.cpp](problems/tree/lc0113_path_sum_ii.cpp)
+- In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/tree/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
+
+### Two Pointers
+
+- [11. Container With Most Water](problems/two_pointers/lc0011_container_with_most_water.md) - [lc0011_container_with_most_water.cpp](problems/two_pointers/lc0011_container_with_most_water.cpp)
+- [15. 3Sum](problems/two_pointers/lc0015_3sum.md) - [lc0015_3sum.cpp](problems/two_pointers/lc0015_3sum.cpp)
+- [80. Remove Duplicates from Sorted Array II](problems/two_pointers/lc0080_remove_duplicates_from_sorted_array_ii.md) - [lc0080_remove_duplicates_from_sorted_array_ii.cpp](problems/two_pointers/lc0080_remove_duplicates_from_sorted_array_ii.cpp)
+- [167. Two Sum II - Input Array Is Sorted](problems/two_pointers/lc0167_two_sum_ii_input_array_is_sorted.md) - [lc0167_two_sum_ii_input_array_is_sorted.cpp](problems/two_pointers/lc0167_two_sum_ii_input_array_is_sorted.cpp)
+- In progress: [lc0042_trapping_rain_water.cpp](problems/two_pointers/lc0042_trapping_rain_water.cpp)
