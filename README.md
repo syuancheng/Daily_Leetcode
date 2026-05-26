@@ -117,6 +117,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [112. Path Sum](problems/tree/lc0112_path_sum.md) - [lc0112_path_sum.cpp](problems/tree/lc0112_path_sum.cpp)
 - [144. Binary Tree Preorder Traversal](problems/tree/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/tree/lc0144_binary_tree_preorder_traversal.cpp)
 - [145. Binary Tree Postorder Traversal](problems/tree/lc0145_binary_tree_postorder_traversal.md) - [lc0145_binary_tree_postorder_traversal.cpp](problems/tree/lc0145_binary_tree_postorder_traversal.cpp)
+- [199. Binary Tree Right Side View](problems/tree/lc0199_right_side_view.md) - [lc0199_right_side_view.cpp](problems/tree/lc0199_right_side_view.cpp)
 - [297. Serialize and Deserialize Binary Tree](problems/tree/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/tree/lc0297_serialize_and_deserialize_binary_tree.cpp)
 - [543. Diameter of Binary Tree](problems/tree/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/tree/lc0543_diameter_of_binary_tree.cpp)
 - In progress: [lc0113_path_sum_ii.cpp](problems/tree/lc0113_path_sum_ii.cpp)
