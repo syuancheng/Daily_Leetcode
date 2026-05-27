@@ -8,8 +8,8 @@
 
 ## Mastery
 
-- Attempts: OO
-- Status: Proficient
+- Attempts: OH
+- Status: Familiar
 
 ## Link
 
