@@ -1,4 +1,28 @@
-#include "tree.h"
+# 94. Binary Tree Inorder Traversal
+
+## Labels
+
+- Tree
+- DFS
+- Stack
+
+## Mastery
+
+- Attempts: OO
+- Status: Proficient
+
+## Link
+
+https://leetcode.com/problems/binary-tree-inorder-traversal/
+
+## Problem Description
+
+Return the inorder traversal of a binary tree.
+
+## My Solution
+
+```cpp
+#include "type.h"
 #include <cstddef>
 #include <stack>
 #include <vector>
@@ -49,3 +73,9 @@ public:
     return;
   }
 };
+```
+
+## Complexity
+
+- Time: O(n).
+- Space: O(h).

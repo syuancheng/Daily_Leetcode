@@ -1,4 +1,28 @@
-#include "tree.h"
+# 144. Binary Tree Preorder Traversal
+
+## Labels
+
+- Tree
+- DFS
+- Stack
+
+## Mastery
+
+- Attempts: OO
+- Status: Proficient
+
+## Link
+
+https://leetcode.com/problems/binary-tree-preorder-traversal/
+
+## Problem Description
+
+Return the preorder traversal of a binary tree.
+
+## My Solution
+
+```cpp
+#include "type.h"
 #include <cstddef>
 #include <stack>
 #include <vector>
@@ -82,3 +106,9 @@ public:
     return ans;
   }
 };
+```
+
+## Complexity
+
+- Time: O(n).
+- Space: O(h).

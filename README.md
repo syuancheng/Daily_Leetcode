@@ -22,6 +22,16 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [46. Permutations](problems/backtracking/lc0046_permutations.md) - [lc0046_permutations.cpp](problems/backtracking/lc0046_permutations.cpp)
 - [77. Combinations](problems/backtracking/lc0077_combinations.md) - [lc0077_combinations.cpp](problems/backtracking/lc0077_combinations.cpp)
 
+### BFS
+
+- [102. Binary Tree Level Order Traversal](problems/bfs/lc0102_binary_tree_level_order_traversal.md) - [lc0102_binary_tree_level_order_traversal.cpp](problems/bfs/lc0102_binary_tree_level_order_traversal.cpp)
+- [111. Minimum Depth of Binary Tree](problems/bfs/lc0111_minimum_depth_of_binary_tree.md) - [lc0111_minimum_depth_of_binary_tree.cpp](problems/bfs/lc0111_minimum_depth_of_binary_tree.cpp)
+- [127. Word Ladder](problems/bfs/lc0127_word_ladder.md) - [lc0127_word_ladder.cpp](problems/bfs/lc0127_word_ladder.cpp)
+- [199. Binary Tree Right Side View](problems/bfs/lc0199_right_side_view.md) - [lc0199_right_side_view.cpp](problems/bfs/lc0199_right_side_view.cpp)
+- [200. Number of Islands](problems/bfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/bfs/lc0200_number_of_islands.cpp)
+- [207. Course Schedule](problems/bfs/lc0207_course_schedule.md) - [lc0207_course_schedule.cpp](problems/bfs/lc0207_course_schedule.cpp)
+- [994. Rotting Oranges](problems/bfs/lc0994_rotting_oranges.md) - [lc0994_rotting_oranges.cpp](problems/bfs/lc0994_rotting_oranges.cpp)
+
 ### Binary Search
 
 - [4. Median of Two Sorted Arrays](problems/binary_search/lc0004_median_of_two_sorted_arrays.md) - [lc0004_median_of_two_sorted_arrays.cpp](problems/binary_search/lc0004_median_of_two_sorted_arrays.cpp)
@@ -36,18 +46,24 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 - [146. LRU Cache](problems/design/lc0146_lru_cache.md) - [lc0146_lru_cache.cpp](problems/design/lc0146_lru_cache.cpp)
 
+### DFS
+
+- [94. Binary Tree Inorder Traversal](problems/dfs/lc0094_binary_tree_inorder_traversal.md) - [lc0094_binary_tree_inorder_traversal.cpp](problems/dfs/lc0094_binary_tree_inorder_traversal.cpp)
+- [98. Validate Binary Search Tree](problems/dfs/lc0098_validate_binary_search_tree.md) - [lc0098_validate_binary_search_tree.cpp](problems/dfs/lc0098_validate_binary_search_tree.cpp)
+- [104. Maximum Depth of Binary Tree](problems/dfs/lc0104_maximum_depth_of_binary_tree.md) - [lc0104_maximum_depth_of_binary_tree.cpp](problems/dfs/lc0104_maximum_depth_of_binary_tree.cpp)
+- [112. Path Sum](problems/dfs/lc0112_path_sum.md) - [lc0112_path_sum.cpp](problems/dfs/lc0112_path_sum.cpp)
+- [144. Binary Tree Preorder Traversal](problems/dfs/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/dfs/lc0144_binary_tree_preorder_traversal.cpp)
+- [145. Binary Tree Postorder Traversal](problems/dfs/lc0145_binary_tree_postorder_traversal.md) - [lc0145_binary_tree_postorder_traversal.cpp](problems/dfs/lc0145_binary_tree_postorder_traversal.cpp)
+- [297. Serialize and Deserialize Binary Tree](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.cpp)
+- [543. Diameter of Binary Tree](problems/dfs/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/dfs/lc0543_diameter_of_binary_tree.cpp)
+- In progress: [lc0113_path_sum_ii.cpp](problems/dfs/lc0113_path_sum_ii.cpp)
+- In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/dfs/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
+
 ### Dynamic Programming
 
 - [53. Maximum Subarray](problems/dynamic_programming/lc0053_maximum_subarray.md) - [lc0053_maximum_subarray.cpp](problems/dynamic_programming/lc0053_maximum_subarray.cpp)
 - [70. Climbing Stairs](problems/dynamic_programming/lc0070_climbing_stairs.md) - [lc0070_climbing_stairs.cpp](problems/dynamic_programming/lc0070_climbing_stairs.cpp)
 - In progress: [lc0322_coin_change.cpp](problems/dynamic_programming/lc0322_coin_change.cpp)
-
-### Graph / BFS / DFS
-
-- [127. Word Ladder](problems/graph_bfs_dfs/lc0127_word_ladder.md) - [lc0127_word_ladder.cpp](problems/graph_bfs_dfs/lc0127_word_ladder.cpp)
-- [200. Number of Islands](problems/graph_bfs_dfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/graph_bfs_dfs/lc0200_number_of_islands.cpp)
-- [207. Course Schedule](problems/graph_bfs_dfs/lc0207_course_schedule.md) - [lc0207_course_schedule.cpp](problems/graph_bfs_dfs/lc0207_course_schedule.cpp)
-- [994. Rotting Oranges](problems/graph_bfs_dfs/lc0994_rotting_oranges.md) - [lc0994_rotting_oranges.cpp](problems/graph_bfs_dfs/lc0994_rotting_oranges.cpp)
 
 ### JavaScript Basics
 
@@ -106,22 +122,6 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 - [20. Valid Parentheses](problems/stack_queue/lc0020_valid_parentheses.md) - [lc0020_valid_parentheses.cpp](problems/stack_queue/lc0020_valid_parentheses.cpp)
 - [933. Number of Recent Calls](problems/stack_queue/lc0933_number_of_recent_calls.md) - [lc0933_number_of_recent_calls.cpp](problems/stack_queue/lc0933_number_of_recent_calls.cpp)
-
-### Tree
-
-- [94. Binary Tree Inorder Traversal](problems/tree/lc0094_binary_tree_inorder_traversal.md) - [lc0094_binary_tree_inorder_traversal.cpp](problems/tree/lc0094_binary_tree_inorder_traversal.cpp)
-- [98. Validate Binary Search Tree](problems/tree/lc0098_validate_binary_search_tree.md) - [lc0098_validate_binary_search_tree.cpp](problems/tree/lc0098_validate_binary_search_tree.cpp)
-- [102. Binary Tree Level Order Traversal](problems/tree/lc0102_binary_tree_level_order_traversal.md) - [lc0102_binary_tree_level_order_traversal.cpp](problems/tree/lc0102_binary_tree_level_order_traversal.cpp)
-- [104. Maximum Depth of Binary Tree](problems/tree/lc0104_maximum_depth_of_binary_tree.md) - [lc0104_maximum_depth_of_binary_tree.cpp](problems/tree/lc0104_maximum_depth_of_binary_tree.cpp)
-- [111. Minimum Depth of Binary Tree](problems/tree/lc0111_minimum_depth_of_binary_tree.md) - [lc0111_minimum_depth_of_binary_tree.cpp](problems/tree/lc0111_minimum_depth_of_binary_tree.cpp)
-- [112. Path Sum](problems/tree/lc0112_path_sum.md) - [lc0112_path_sum.cpp](problems/tree/lc0112_path_sum.cpp)
-- [144. Binary Tree Preorder Traversal](problems/tree/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/tree/lc0144_binary_tree_preorder_traversal.cpp)
-- [145. Binary Tree Postorder Traversal](problems/tree/lc0145_binary_tree_postorder_traversal.md) - [lc0145_binary_tree_postorder_traversal.cpp](problems/tree/lc0145_binary_tree_postorder_traversal.cpp)
-- [199. Binary Tree Right Side View](problems/tree/lc0199_right_side_view.md) - [lc0199_right_side_view.cpp](problems/tree/lc0199_right_side_view.cpp)
-- [297. Serialize and Deserialize Binary Tree](problems/tree/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/tree/lc0297_serialize_and_deserialize_binary_tree.cpp)
-- [543. Diameter of Binary Tree](problems/tree/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/tree/lc0543_diameter_of_binary_tree.cpp)
-- In progress: [lc0113_path_sum_ii.cpp](problems/tree/lc0113_path_sum_ii.cpp)
-- In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/tree/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
 
 ### Two Pointers
 

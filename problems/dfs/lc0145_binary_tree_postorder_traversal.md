@@ -22,7 +22,7 @@ Return the postorder traversal of a binary tree.
 ## My Solution
 
 ```cpp
-#include "tree.h"
+#include "type.h"
 #include <algorithm>
 #include <cstddef>
 #include <stack>
