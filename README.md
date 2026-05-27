@@ -52,11 +52,11 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [98. Validate Binary Search Tree](problems/dfs/lc0098_validate_binary_search_tree.md) - [lc0098_validate_binary_search_tree.cpp](problems/dfs/lc0098_validate_binary_search_tree.cpp)
 - [104. Maximum Depth of Binary Tree](problems/dfs/lc0104_maximum_depth_of_binary_tree.md) - [lc0104_maximum_depth_of_binary_tree.cpp](problems/dfs/lc0104_maximum_depth_of_binary_tree.cpp)
 - [112. Path Sum](problems/dfs/lc0112_path_sum.md) - [lc0112_path_sum.cpp](problems/dfs/lc0112_path_sum.cpp)
+- [113. Path Sum II](problems/dfs/lc0113_path_sum_ii.md) - [lc0113_path_sum_ii.cpp](problems/dfs/lc0113_path_sum_ii.cpp)
 - [144. Binary Tree Preorder Traversal](problems/dfs/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/dfs/lc0144_binary_tree_preorder_traversal.cpp)
 - [145. Binary Tree Postorder Traversal](problems/dfs/lc0145_binary_tree_postorder_traversal.md) - [lc0145_binary_tree_postorder_traversal.cpp](problems/dfs/lc0145_binary_tree_postorder_traversal.cpp)
 - [297. Serialize and Deserialize Binary Tree](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.cpp)
 - [543. Diameter of Binary Tree](problems/dfs/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/dfs/lc0543_diameter_of_binary_tree.cpp)
-- In progress: [lc0113_path_sum_ii.cpp](problems/dfs/lc0113_path_sum_ii.cpp)
 - In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/dfs/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
 
 ### Dynamic Programming
