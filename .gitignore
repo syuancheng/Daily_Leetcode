@@ -19,3 +19,6 @@ npm-debug.log*
 # 环境变量（如果以后有 API key 放这里）
 .env
 .env.local
+
+
+ai-agent.md
