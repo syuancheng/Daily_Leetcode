@@ -6,6 +6,11 @@
 - Backtracking
 - DFS
 
+## Mastery
+
+- Attempts: H
+- Status: Beginner
+
 ## Link
 
 https://leetcode.com/problems/restore-ip-addresses/
@@ -33,9 +38,63 @@ Input: s = "101023"
 Output: ["1.0.10.23", "1.0.102.3", "10.1.0.23", "10.10.2.3", "101.0.2.3"]
 ```
 
-## Notes
+## My Solution
 
-- You need to split the string into exactly four parts.
-- Each part length can only be `1`, `2`, or `3`.
-- A part like `"01"` or `"001"` is invalid.
-- A part greater than `255` is invalid.
+```cpp
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Solution {
+private:
+  vector<string> result;
+
+public:
+  bool isValid(string &s) {
+    if (s.empty()) {
+      return false;
+    }
+    if (s.size() > 1 && s.front() == '0') {
+      return false;
+    }
+
+    int num = 0;
+    for (char c : s) {
+      num = num * 10 + (c - '0');
+      if (num > 255) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  void dfs(string &s, int start, vector<string> &path) {
+    if (path.size() == 4) {
+      if (start == s.size()) {
+        string ip = path[0] + "." + path[1] + "." + path[2] + "." + path[3];
+        result.push_back(ip);
+      }
+    }
+
+    for (int len = 1; len <= 3 && start + len <= s.size(); len++) {
+      string sub = s.substr(start, len);
+      if (isValid(sub)) {
+        path.push_back(sub);
+        dfs(s, start + len, path);
+        path.pop_back();
+      }
+    }
+  }
+  vector<string> restoreIpAddresses(string s) {
+    vector<string> path;
+    dfs(s, 0, path);
+    return result;
+  }
+};
+```
+
+## Complexity
+
+- Time: O(1) with respect to input length, because an IPv4 address can have at most 12 digits and each segment has at most 3 digits. More generally, the DFS tries at most 3 choices for each of 4 segments.
+- Space: O(1) auxiliary space, excluding the output, because the recursion depth is bounded by 4.
