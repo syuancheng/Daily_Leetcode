@@ -21,6 +21,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 - [46. Permutations](problems/backtracking/lc0046_permutations.md) - [lc0046_permutations.cpp](problems/backtracking/lc0046_permutations.cpp)
 - [77. Combinations](problems/backtracking/lc0077_combinations.md) - [lc0077_combinations.cpp](problems/backtracking/lc0077_combinations.cpp)
+- [78. Subsets](problems/backtracking/lc0078_subsets.md) - [lc0078_subsets.cpp](problems/backtracking/lc0078_subsets.cpp)
 - In progress: [93. Restore IP Addresses](problems/backtracking/lc0093_restore_ip_addresses.md) - [lc0093_restore_ip_addresses.cpp](problems/backtracking/lc0093_restore_ip_addresses.cpp)
 
 ### BFS
