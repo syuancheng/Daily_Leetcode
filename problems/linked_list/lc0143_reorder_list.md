@@ -4,7 +4,7 @@
 
 - Linked List
 - Two Pointers
-- Stack
+- Recursion
 
 ## Mastery
 
@@ -17,7 +17,26 @@ https://leetcode.com/problems/reorder-list/
 
 ## Problem Description
 
-Reorder a linked list in L0, Ln, L1, Ln-1 order.
+Given the head of a singly linked list, reorder the list from:
+
+```text
+L0 -> L1 -> ... -> Ln-1 -> Ln
+```
+
+to:
+
+```text
+L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 -> ...
+```
+
+The node values must not be changed; the list must be reordered by relinking the existing nodes.
+
+Example:
+
+```text
+Input: head = [1,2,3,4]
+Output: [1,4,2,3]
+```
 
 ## My Solution
 
@@ -42,59 +61,56 @@ L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 class Solution {
 public:
   void reorderList(ListNode *head) {
-    if (head == nullptr) {
+    if (!head || !head->next) {
       return;
     }
-    ListNode *midNode = middleNode(head);
+    ListNode *mid = getMiddleNode(head);
     ListNode *l1 = head;
-    ListNode *l2 = midNode->next;
-    midNode->next = nullptr;
-    l2 = reverseList(l2);
-    mergeList(l1, l2);
-  }
+    ListNode *l2 = reverseList(mid->next);
+    mid->next = nullptr;
 
-  void mergeList(ListNode *l1, ListNode *l2) {
-    ListNode *l1_tmp;
-    ListNode *l2_tmp;
+    ListNode *l1_tmp, *l2_tmp;
 
-    while (l1 != nullptr && l2 != nullptr) {
+    while (l1 && l2) {//这个合并的前提是l1.size > l2.size
       l1_tmp = l1->next;
       l2_tmp = l2->next;
 
       l1->next = l2;
+      l2->next = l1_tmp;
       l1 = l1_tmp;
-
-      l2->next = l1;
       l2 = l2_tmp;
     }
   }
 
-  ListNode *middleNode(ListNode *head) {
-    ListNode *fast = head;
-    ListNode *slow = head;
+  ListNode *getMiddleNode(ListNode *head) {
+    ListNode *slow = head, *fast = head;
+
     while (fast->next != nullptr && fast->next->next != nullptr) {
       slow = slow->next;
       fast = fast->next->next;
     }
+
     return slow;
   }
 
   ListNode *reverseList(ListNode *head) {
-    ListNode *prev = nullptr;
-    ListNode *curr = head;
-    while (curr) {
-      ListNode *tmp = curr->next;
-      curr->next = prev;
-      prev = curr;
-      curr = tmp;
-    }
+    ListNode *dummy = new ListNode();
 
-    return prev;
+    ListNode *tmp;
+    while (head) {
+      tmp = head->next;
+
+      head->next = dummy->next;
+      dummy->next = head;
+
+      head = tmp;
+    }
+    return dummy->next;
   }
 };
 ```
 
 ## Complexity
 
-- Time: O(n).
-- Space: O(1).
+- Time: O(n), where `n` is the number of nodes in the linked list.
+- Space: O(1), excluding the constant number of pointer variables used by the algorithm.
