@@ -2,17 +2,6 @@
 
 #include <vector>
 void backTracking() {
-  if (/**终止条件 */) {
-    // 收集结果
-    return;
-  }
-  // 单层搜索逻辑
-  for (/**集合里的每一个元素，也可以是叶子节点的个数 */) {
-    // 处理节点
-    // 递归函数
-    // 回溯操作，撤销梳理节点的情况
-  }
-  return;
 }
 
 // 组合是无序的
@@ -55,22 +44,9 @@ private:
   std::vector<int> path;
   // 1234 里取2个组合的数。 n=4, k=2
   void backTrack1(int n, int k, int start_idx) {
-    if (path.size() == k) {
-      result.push_back(path);
-      return;
-    }
-    for (int i = start_idx; i <= n; i++) {
-      path.push_back(i);
-      backTrack1(n, k, i + 1);
-      path.pop_back();
-    }
   }
 
 public:
   std::vector<std::vector<int>> combine(int n, int k) {
-    result.clear();
-    path.clear();
-    backTrack1(n, k, 1);
-    return result;
   }
 };

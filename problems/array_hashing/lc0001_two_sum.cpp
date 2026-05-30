@@ -25,35 +25,11 @@ target  的那 两个 整数，并返回它们的数组下标。
 class Solution {
 public:
   vector<int> twoSum(vector<int> &nums, int target) {
-    vector<int> ans;
-    for (int i = 0; i < nums.size(); i++) {
-      for (int j = i + 1; j < nums.size(); j++) {
-        if (nums[i] + nums[j] == target) {
-          ans = {i, j};
-          return ans;
-        }
-      }
-    }
-
-    return ans;
   }
 };
 
 std::vector<int> twoSum(std::vector<int> &nums, int target) {
-  unordered_map<int, int> hashtable;
-  for (int i = 0; i < nums.size(); i++) {
-    if (hashtable.count(target-nums[i]) == 1) {
-      return {hashtable[target-nums[i]], i};
-    }
-    hashtable.insert(make_pair(nums[i], i));
-  }
-  return {};
 }
 
 int main() {
-  std::vector<int> tmp = {2, 7, 11, 15};
-  auto res = twoSum(tmp, 9);
-
-  std::cout << "1st:" << res[0] << ", 2nd: " << res[1] << std::endl;
-  return 0;
 }

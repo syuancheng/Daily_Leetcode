@@ -37,34 +37,5 @@
 class Solution {
 public:
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-    ListNode *head = new ListNode();
-
-    ListNode *pre = head;
-
-    int carry = 0;
-    while (l1 || l2) {
-      int v1 = l1 ? l1->val : 0;
-      int v2 = l2 ? l2->val : 0;
-
-      int sum = v1 + v2 + carry;
-
-      pre->next = new ListNode(sum % 10);
-      pre = pre->next;
-
-      carry = sum / 10;
-
-      if (l1) {
-        l1 = l1->next;
-      }
-      if (l2) {
-        l2 = l2->next;
-      }
-    }
-
-    if (carry > 0) {
-      pre->next = new ListNode(carry);
-    }
-
-    return head->next;
   };
 };

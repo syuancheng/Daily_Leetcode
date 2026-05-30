@@ -13,21 +13,9 @@ private:
   ListNode* head;
 public:
     Solution(ListNode* head) {
-        this->head = head;
     }
     
     int getRandom() {
-      int ans = 0, count = 1;
-
-      ListNode* node = head;
-      while (node) {
-        if (rand() % count == 0) {
-          ans = node->val;
-        }
-        count++;
-        node = node->next;
-      }
-      return ans;
     }
 };
 /**
