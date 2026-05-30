@@ -111,6 +111,10 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [438. Find All Anagrams in a String](problems/sliding_window/lc0438_find_all_anagrams_in_a_string.md) - [lc0438_find_all_anagrams_in_a_string.cpp](problems/sliding_window/lc0438_find_all_anagrams_in_a_string.cpp)
 - [567. Permutation in String](problems/sliding_window/lc0567_permutation_in_string.md) - [lc0567_permutation_in_string.cpp](problems/sliding_window/lc0567_permutation_in_string.cpp)
 
+### String
+
+- [Interview. Implement atof](problems/string/interview_atof.md) - [interview_atof.cpp](problems/string/interview_atof.cpp)
+
 ### Sorting / Heap
 
 - [179. Largest Number](problems/sorting_heap/lc0179_largest_number.md) - [lc0179_largest_number.cpp](problems/sorting_heap/lc0179_largest_number.cpp)
