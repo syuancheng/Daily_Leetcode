@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: OO
+- Attempts: OOO
 - Status: Proficient
 
 ## Link
