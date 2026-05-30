@@ -41,23 +41,26 @@ Output: 3 -> 2 -> 1 -> 4 -> 7 -> 6 -> 5
 
 ```cpp
 #include "list_node.h"
+#include <cstddef>
+#include <iostream>
+#include <vector>
 
 ListNode *reverseList(ListNode *head) {
   ListNode *prev = nullptr;
-  ListNode *curr = head;
+  ListNode *cur = head;
 
-  while (curr != nullptr) {
-    ListNode *next = curr->next;
-    curr->next = prev;
-    prev = curr;
-    curr = next;
+  while (cur) {
+    ListNode *next = cur->next;
+    cur->next = prev;
+    prev = cur;
+    cur = next;
   }
 
   return prev;
 }
 
 ListNode *reverseHalvesKeepMiddle(ListNode *head) {
-  if (head == nullptr || head->next == nullptr) {
+  if (head == nullptr || head->next == nullptr || head->next->next == nullptr) {
     return head;
   }
 
@@ -67,43 +70,100 @@ ListNode *reverseHalvesKeepMiddle(ListNode *head) {
   }
 
   int leftLength = length / 2;
-  ListNode *left = head;
-  ListNode *prev = nullptr;
-  ListNode *curr = head;
 
+  ListNode *cur = head;
+  ListNode *pre = nullptr;
   for (int i = 0; i < leftLength; ++i) {
-    prev = curr;
-    curr = curr->next;
+    pre = cur;
+    cur = cur->next;
   }
-  prev->next = nullptr;
+  pre->next = nullptr;
 
+  ListNode *left = head;
+
+  ListNode *right = cur;
   ListNode *middle = nullptr;
-  ListNode *right = curr;
   if (length % 2 == 1) {
-    middle = curr;
-    right = curr->next;
+    middle = cur;
+    right = cur->next;
     middle->next = nullptr;
   }
 
-  ListNode *newHead = reverseList(left);
+  ListNode *newLeft = reverseList(left);
   ListNode *newRight = reverseList(right);
 
-  ListNode *tail = newHead;
-  while (tail->next != nullptr) {
+  ListNode *tail = newLeft;
+  while (tail != nullptr && tail->next != nullptr) {
     tail = tail->next;
   }
-
-  if (middle != nullptr) {
+  if (middle) {
     tail->next = middle;
     tail = middle;
   }
   tail->next = newRight;
+  return newLeft;
+}
 
-  return newHead;
+ListNode *buildList(const std::vector<int> &nums) {
+  ListNode dummy;
+  ListNode *tail = &dummy;
+
+  for (int num : nums) {
+    tail->next = new ListNode(num);
+    tail = tail->next;
+  }
+
+  return dummy.next;
+}
+
+std::vector<int> toVector(ListNode *head) {
+  std::vector<int> result;
+
+  while (head != nullptr) {
+    result.push_back(head->val);
+    head = head->next;
+  }
+
+  return result;
+}
+
+void printVector(const std::vector<int> &nums) {
+  std::cout << "[";
+  for (std::size_t i = 0; i < nums.size(); ++i) {
+    if (i > 0) {
+      std::cout << ", ";
+    }
+    std::cout << nums[i];
+  }
+  std::cout << "]";
+}
+
+void runTest(const std::vector<int> &input, const std::vector<int> &expected) {
+  ListNode *head = buildList(input);
+  std::vector<int> actual = toVector(reverseHalvesKeepMiddle(head));
+
+  printVector(input);
+  std::cout << " -> ";
+  printVector(actual);
+  std::cout << " expected ";
+  printVector(expected);
+  std::cout << (actual == expected ? " [OK]" : " [FAIL]") << '\n';
+}
+
+int main() {
+  runTest({}, {});
+  runTest({1}, {1});
+  runTest({1, 2}, {1, 2});
+  runTest({1, 2, 3}, {1, 2, 3});
+  runTest({1, 2, 3, 4}, {2, 1, 4, 3});
+  runTest({1, 2, 3, 4, 5}, {2, 1, 3, 5, 4});
+  runTest({1, 2, 3, 4, 5, 6, 7}, {3, 2, 1, 4, 7, 6, 5});
+
+  return 0;
 }
 ```
 
 ## Complexity
 
 - Time: O(n), where `n` is the number of nodes in the linked list.
-- Space: O(1), using only a constant number of pointers.
+- Space: O(1), using only a constant number of pointers outside the test helper code.
