@@ -59,6 +59,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [200. Number of Islands](problems/dfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/dfs/lc0200_number_of_islands.cpp)
 - [297. Serialize and Deserialize Binary Tree](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.cpp)
 - [543. Diameter of Binary Tree](problems/dfs/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/dfs/lc0543_diameter_of_binary_tree.cpp)
+- In progress: [695. Max Area of Island](problems/dfs/lc0695_max_area_of_island.md) - [lc0695_max_area_of_island.cpp](problems/dfs/lc0695_max_area_of_island.cpp)
 - In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/dfs/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
 
 ### Dynamic Programming
