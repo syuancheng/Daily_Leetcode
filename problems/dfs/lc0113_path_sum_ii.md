@@ -8,8 +8,8 @@
 
 ## Mastery
 
-- Attempts: OO
-- Status: Proficient
+- Attempts: OOH
+- Status: Beginner
 
 ## Link
 
@@ -40,40 +40,36 @@ class Solution {
 private:
   vector<vector<int>> result;
 
-  int target{0};
-
 public:
-  void dfs(TreeNode *node, vector<int> nums) {
+  void dfs(TreeNode *node, vector<int> &nums,
+           int reamin) { // 如果这里是值拷贝的话，不需要pop_back也对。
     nums.push_back(node->val);
+    reamin -= node->val;
     if (node->left == nullptr && node->right == nullptr) {
-      int sum = 0;
-      for (auto &num : nums) {
-        sum += num;
-      }
-      if (sum == target) {
+      if (reamin == 0) {
         result.push_back(nums);
       }
+      nums.pop_back();
+
       return;
     }
 
-
     if (node->left) {
-      dfs(node->left, nums);
+      dfs(node->left, nums, reamin);
+    }
+    if (node->right) {
+      dfs(node->right, nums, reamin);
     }
 
-    if (node->right) {
-      dfs(node->right, nums);
-    }
+    nums.pop_back();
   }
+
   vector<vector<int>> pathSum(TreeNode *root, int targetSum) {
     if (root == nullptr) {
       return result;
     }
-    target = targetSum;
-
     vector<int> nums;
-    dfs(root, nums);
-
+    dfs(root, nums, targetSum);
     return result;
   }
 };
@@ -81,5 +77,5 @@ public:
 
 ## Complexity
 
-- Time: O(n * h), where `n` is the number of nodes and `h` is the tree height, because each leaf path is summed by scanning the current path.
-- Space: O(n * h) in the worst case for the returned paths and copied path vectors; the recursion depth is O(h).
+- Time: O(n * h) in the worst case, where `n` is the number of nodes and `h` is the tree height, because each valid path copied into `result` can contain up to `h` values.
+- Space: O(h) auxiliary space for the recursion stack and current path, excluding the output. Including the output, space is O(k * h), where `k` is the number of returned paths.

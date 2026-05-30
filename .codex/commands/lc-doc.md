@@ -24,6 +24,11 @@ Workflow:
 3. Analyze the solution only enough to determine labels and complexity.
    - Do not add a review section.
    - If the implementation is obviously incomplete or wrong, do not generate a solved writeup. Instead, tell the user it appears unfinished and leave the `.cpp` as in progress.
+   - Set `Mastery` from the user's attempt history:
+     - `X` means the attempt was incorrect, and maps to `Status: Beginner`.
+     - `H` means the user completed it with help or is not very familiar yet, and maps to `Status: Familiar`.
+     - `O` means the user solved it correctly, and maps to `Status: Proficient`.
+     - For multiple attempts such as `XHO`, keep the full sequence in `Attempts` and set `Status` from the latest symbol.
 
 4. Create or update the Markdown file next to the solution.
    - For `path/to/lc0199_right_side_view.cpp`, write `path/to/lc0199_right_side_view.md`.
@@ -57,8 +62,11 @@ Markdown format:
 
 ## Mastery
 
-- Attempts: OO
-- Status: Proficient
+- Attempts: <sequence of X/H/O attempts, e.g. X, H, O, XH, XO, XHO>
+  - X: incorrect attempt
+  - H: solved with help or not very familiar yet
+  - O: solved correctly
+- Status: <Beginner | Familiar | Proficient>
 
 ## Link
 
@@ -84,6 +92,7 @@ Quality bar:
 
 - Use clear, natural English.
 - Include labels such as `Array`, `Hash Table`, `Two Pointers`, `Binary Search`, `Dynamic Programming`, `Linked List`, `Tree`, `Graph`, `BFS`, `DFS`, `Backtracking`, `Stack`, `Queue`, `Heap`, `Greedy`, or `Sliding Window`.
+- Use the Mastery mapping exactly: `X -> Beginner`, `H -> Familiar`, `O -> Proficient`; for a sequence, the status follows the final/latest symbol.
 - The Markdown must contain the complete original solution before the `.cpp` file is reset.
 - Include only the sections above unless the user explicitly asks for review or corrected code.
 - Keep edits limited to the Markdown writeup, README index, and resetting the requested `.cpp` file.

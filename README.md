@@ -56,6 +56,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [113. Path Sum II](problems/dfs/lc0113_path_sum_ii.md) - [lc0113_path_sum_ii.cpp](problems/dfs/lc0113_path_sum_ii.cpp)
 - [144. Binary Tree Preorder Traversal](problems/dfs/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/dfs/lc0144_binary_tree_preorder_traversal.cpp)
 - [145. Binary Tree Postorder Traversal](problems/dfs/lc0145_binary_tree_postorder_traversal.md) - [lc0145_binary_tree_postorder_traversal.cpp](problems/dfs/lc0145_binary_tree_postorder_traversal.cpp)
+- [200. Number of Islands](problems/dfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/dfs/lc0200_number_of_islands.cpp)
 - [297. Serialize and Deserialize Binary Tree](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.cpp)
 - [543. Diameter of Binary Tree](problems/dfs/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/dfs/lc0543_diameter_of_binary_tree.cpp)
 - In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/dfs/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
