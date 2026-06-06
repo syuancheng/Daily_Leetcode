@@ -32,7 +32,7 @@ using namespace std;
 
 /**
 144. 二叉树的前序遍历
-中左右
+根左右
 */
 
 class Solution {

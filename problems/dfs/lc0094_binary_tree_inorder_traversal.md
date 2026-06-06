@@ -31,7 +31,7 @@ using namespace std;
 /**
 94. 二叉树的中序遍历
 中序遍历
-左，中，右
+左，根，右
 */
 class Solution {
 public:
