@@ -9,7 +9,7 @@
 ## Mastery
 
 - Attempts: O
-- Status: Familiar
+- Status: Beginner
 
 ## Link
 
