@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: OOHO
+- Attempts: OOHOH
 - Status: Familiar
 
 ## Link
