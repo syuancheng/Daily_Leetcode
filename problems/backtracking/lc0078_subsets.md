@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: H
+- Attempts: HH
 - Status: Familiar
 
 ## Link
@@ -31,28 +31,29 @@ Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 ## My Solution
 
 ```cpp
-#include <vector>
-
-using namespace std;
-
 class Solution {
 private:
   vector<vector<int>> result;
+
 public:
-  void dfs(int start, vector<int> &remain, vector<int>& data) {
-    result.push_back(data);
+  void dfs(vector<int> &current, vector<int> &remain, int start) {
+    result.push_back(current);
 
-    for (int i = start; i < remain.size(); i++) {
-      data.push_back(remain[i]);
+    for (int i = start; i < remain.size(); ++i) {
+      current.push_back(remain[i]);
 
-      dfs(i + 1, remain, data);
+      dfs(current, remain, i + 1);
 
-      data.pop_back();
+      current.pop_back();
     }
   }
   vector<vector<int>> subsets(vector<int> &nums) {
-    vector<int> current;
-    dfs(0, nums, current);
+    if (nums.empty()) {
+      result.push_back({});
+      return result;
+    }
+    vector<int> curr;
+    dfs(curr, nums, 0);
     return result;
   }
 };
