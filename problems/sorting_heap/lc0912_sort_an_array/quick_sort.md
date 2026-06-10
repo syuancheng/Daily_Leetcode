@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: XXH
+- Attempts: XXHH
 - Status: Familiar
 
 ## Link
