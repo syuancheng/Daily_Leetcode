@@ -101,6 +101,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [725. Split Linked List in Parts](problems/linked_list/lc0725_split_linked_list_in_parts.md) - [lc0725_split_linked_list_in_parts.cpp](problems/linked_list/lc0725_split_linked_list_in_parts.cpp)
 - [876. Middle of the Linked List](problems/linked_list/lc0876_middle_of_the_linked_list.md) - [lc0876_middle_of_the_linked_list.cpp](problems/linked_list/lc0876_middle_of_the_linked_list.cpp)
 - [Interview. Reverse Halves and Keep Middle](problems/linked_list/interview_reverse_halves_keep_middle.md) - [interview_reverse_halves_keep_middle.cpp](problems/linked_list/interview_reverse_halves_keep_middle.cpp)
+- In progress: [Interview. Singly Linked List Basics](problems/linked_list/interview_singly_linked_list_basics.cpp)
 - In progress: [lc0023_merge_k_sorted_lists.cpp](problems/linked_list/lc0023_merge_k_sorted_lists.cpp)
 
 ### Math / Bit Manipulation
