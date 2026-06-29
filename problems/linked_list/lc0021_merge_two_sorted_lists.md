@@ -21,7 +21,7 @@ Merge two sorted linked lists into one sorted linked list.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 
 class Solution {
 public:

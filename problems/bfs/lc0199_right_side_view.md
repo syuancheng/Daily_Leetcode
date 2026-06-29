@@ -31,7 +31,7 @@ Output: [1,3,4]
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <queue>
 #include <vector>
 

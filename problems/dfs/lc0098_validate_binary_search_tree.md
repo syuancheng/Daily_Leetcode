@@ -22,7 +22,7 @@ Determine whether a binary tree is a valid binary search tree.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <climits>
 
 /**

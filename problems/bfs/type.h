@@ -1,20 +1,6 @@
+#ifndef PROBLEMS_BFS_TYPE_H
+#define PROBLEMS_BFS_TYPE_H
 
-struct ListNode {
-  int val;
-  ListNode *next;
+#include "../common/nodes.h"
 
-  ListNode() : val(0), next(nullptr) {}
-  ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *n) : val(x), next(n) {}
-};
-
-struct TreeNode {
-  int val;
-
-  TreeNode *left;
-  TreeNode *right;
-
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode *l, TreeNode *r) : val(x), left(l), right(r) {}
-};
+#endif

@@ -22,7 +22,7 @@ Return the node where two singly linked lists intersect, or null.
 
 ```cpp
 #include <cstddef>
-#include "list_node.h"
+#include "../common/nodes.h"
 #include <unordered_set>
 
 using namespace std;

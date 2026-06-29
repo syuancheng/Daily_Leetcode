@@ -1,10 +1,6 @@
+#ifndef PROBLEMS_LINKED_LIST_LIST_NODE_H
+#define PROBLEMS_LINKED_LIST_LIST_NODE_H
 
+#include "../common/nodes.h"
 
-struct ListNode {
-  int val;
-  ListNode *next;
-
-  ListNode() : val(0), next(nullptr) {}
-  ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#endif

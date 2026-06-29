@@ -41,7 +41,7 @@ Output: [1,4,2,3]
 ## My Solution
 
 ```cpp
-#include "list_node.h"
+#include "../common/nodes.h"
 
 /**
 143. 重排链表

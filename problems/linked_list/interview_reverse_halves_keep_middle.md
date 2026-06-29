@@ -40,7 +40,7 @@ Output: 3 -> 2 -> 1 -> 4 -> 7 -> 6 -> 5
 ## My Solution
 
 ```cpp
-#include "list_node.h"
+#include "../common/nodes.h"
 #include <cstddef>
 #include <iostream>
 #include <vector>

@@ -23,7 +23,7 @@ Serialize and deserialize a binary tree.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <cstddef>
 #include <string>
 #include <sstream>

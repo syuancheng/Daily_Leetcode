@@ -21,7 +21,7 @@ Reverse a singly linked list.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 
 class Solution {
 public:

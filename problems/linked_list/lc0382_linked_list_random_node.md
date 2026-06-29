@@ -26,7 +26,7 @@ Return a random node value from a linked list with equal probability.
 #include <cstdlib>
 #include <random>
 #include <vector>
-#include "list_node.h"
+#include "../common/nodes.h"
 
 /**
 382. 链表随机节点

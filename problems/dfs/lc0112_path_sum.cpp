@@ -1,4 +1,4 @@
-#include "type.h"
+#include "../common/nodes.h"
 #include <vector>
 
 class Solution {

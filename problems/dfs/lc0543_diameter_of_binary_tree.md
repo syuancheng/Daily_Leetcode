@@ -31,7 +31,7 @@ Explanation: The longest path is [4,2,1,3] or [5,2,1,3].
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <algorithm>
 
 class Solution {

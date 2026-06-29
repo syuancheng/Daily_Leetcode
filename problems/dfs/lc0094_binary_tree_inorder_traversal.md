@@ -22,7 +22,7 @@ Return the inorder traversal of a binary tree.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <cstddef>
 #include <stack>
 #include <vector>

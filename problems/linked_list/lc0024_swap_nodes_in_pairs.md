@@ -21,13 +21,7 @@ Swap every two adjacent nodes in a linked list and return the new head.
 ## My Solution
 
 ```cpp
-struct ListNode {
-  int val;
-  ListNode *next;
-  ListNode() : val(0), next(nullptr) {}
-  ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "../common/nodes.h"
 
 class Solution {
 public:

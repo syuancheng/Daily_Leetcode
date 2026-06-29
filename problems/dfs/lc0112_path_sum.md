@@ -21,7 +21,7 @@ Determine whether a root-to-leaf path sums to targetSum.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <vector>
 
 class Solution {

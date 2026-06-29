@@ -31,7 +31,7 @@ Output: [[5,4,11,2],[5,8,4,5]]
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <vector>
 
 using namespace std;

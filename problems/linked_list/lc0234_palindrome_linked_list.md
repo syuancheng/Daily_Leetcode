@@ -22,7 +22,7 @@ Determine whether a linked list is a palindrome.
 ## My Solution
 
 ```cpp
-#include "list_node.h"
+#include "../common/nodes.h"
 #include <cstddef>
 #include <vector>
 

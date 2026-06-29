@@ -22,18 +22,9 @@ Return the minimum depth from root to a leaf node.
 ## My Solution
 
 ```cpp
-
 #include <cstddef>
 #include <queue>
-struct TreeNode {
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode *left, TreeNode *right)
-      : val(x), left(left), right(right) {}
-};
+#include "../common/nodes.h"
 
 class Solution {
 public:

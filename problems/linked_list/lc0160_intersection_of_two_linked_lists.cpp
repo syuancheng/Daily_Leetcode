@@ -1,5 +1,5 @@
 #include <cstddef>
-#include "list_node.h"
+#include "../common/nodes.h"
 #include <unordered_set>
 
 using namespace std;

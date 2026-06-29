@@ -21,7 +21,7 @@ Determine whether a linked list contains a cycle.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 
 class Solution {
 public:

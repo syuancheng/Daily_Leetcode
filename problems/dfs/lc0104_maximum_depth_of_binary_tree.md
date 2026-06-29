@@ -22,7 +22,7 @@ Return the maximum depth of a binary tree.
 ## My Solution
 
 ```cpp
-#include "type.h"
+#include "../common/nodes.h"
 #include <algorithm>
 
 /**

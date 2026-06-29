@@ -22,7 +22,7 @@ Sort a linked list in ascending order.
 ## My Solution
 
 ```cpp
-#include "list_node.h"
+#include "../common/nodes.h"
 
 class Solution {
 public:

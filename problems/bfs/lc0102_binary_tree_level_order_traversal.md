@@ -24,13 +24,7 @@ Return the level-order traversal of a binary tree.
 ```cpp
 #include <queue>
 #include <vector>
-
-struct TreeNode {
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
+#include "../common/nodes.h"
 
 std::vector<std::vector<int>> levelOrder(TreeNode *root) {
   std::vector<std::vector<int>> result;
