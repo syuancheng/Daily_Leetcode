@@ -7,12 +7,22 @@
 */
 class Solution {
 public:
+  ListNode *left;
+  bool res = true;
   bool isPalindrome(ListNode *head) {
+    left = head;
+    traverse(head);
+    return res;
   }
 
-  ListNode *reverseListNode(ListNode *head) {
-  }
-
-  bool isPalindrome2(ListNode *head) {
+  void traverse(ListNode *right) {
+    if (right == nullptr) {
+      return;
+    }
+    traverse(right->next);
+    if (left->val != right->val) {
+      res = false;
+    }
+    left = left->next;
   }
 };
