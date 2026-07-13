@@ -9,6 +9,10 @@ cpp_notes/brpc/bthread/build/
 task_flow/build/
 task_flow/bthread/build/
 
+# Local scratchpad drafts
+scratch/*
+!scratch/README.md
+
 # 系统文件
 .DS_Store
 
