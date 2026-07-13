@@ -1,12 +1,15 @@
-#include "../problems/common/nodes.h"
+#include "../common/nodes.h"
 
 class Solution {
 public:
   ListNode *deleteDuplicates(ListNode *head) {
     if (head == nullptr) {
-      return head;
+      return nullptr;
     }
-    ListNode *slow = head, *fast = head;
+
+    ListNode *slow = head;
+    ListNode *fast = head;
+
     while (fast != nullptr) {
       if (fast->val != slow->val) {
         slow->next = fast;
@@ -14,6 +17,7 @@ public:
       }
       fast = fast->next;
     }
+
     slow->next = nullptr;
     return head;
   }

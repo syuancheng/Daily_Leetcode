@@ -91,6 +91,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [24. Swap Nodes in Pairs](problems/linked_list/lc0024_swap_nodes_in_pairs.md) - [lc0024_swap_nodes_in_pairs.cpp](problems/linked_list/lc0024_swap_nodes_in_pairs.cpp)
 - [25. Reverse Nodes in k-Group](problems/linked_list/lc0025_reverse_nodes_in_k_group.md) - [lc0025_reverse_nodes_in_k_group.cpp](problems/linked_list/lc0025_reverse_nodes_in_k_group.cpp)
 - [82. Remove Duplicates from Sorted List II](problems/linked_list/lc0082_remove_duplicates_from_sorted_list_ii.md) - [lc0082_remove_duplicates_from_sorted_list_ii.cpp](problems/linked_list/lc0082_remove_duplicates_from_sorted_list_ii.cpp)
+- [83. Remove Duplicates from Sorted List](problems/linked_list/lc0083_remove_duplicates_from_sorted_list.md) - [lc0083_remove_duplicates_from_sorted_list.cpp](problems/linked_list/lc0083_remove_duplicates_from_sorted_list.cpp)
 - [86. Partition List](problems/linked_list/lc0086_partition_list.md) - [lc0086_partition_list.cpp](problems/linked_list/lc0086_partition_list.cpp)
 - [92. Reverse Linked List II](problems/linked_list/lc0092_reverse_linked_list_ii.md) - [lc0092_reverse_linked_list_ii.cpp](problems/linked_list/lc0092_reverse_linked_list_ii.cpp)
 - [141. Linked List Cycle](problems/linked_list/lc0141_linked_list_cycle.md) - [lc0141_linked_list_cycle.cpp](problems/linked_list/lc0141_linked_list_cycle.cpp)
@@ -127,6 +128,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 ### String
 
+- [5. Longest Palindromic Substring](problems/string/lc0005_longest_palindromic_substring.md) - [lc0005_longest_palindromic_substring.cpp](problems/string/lc0005_longest_palindromic_substring.cpp)
 - [Interview. Implement atof](problems/string/interview_atof.md) - [interview_atof.cpp](problems/string/interview_atof.cpp)
 
 ### Sorting / Heap
@@ -149,4 +151,5 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [15. 3Sum](problems/two_pointers/lc0015_3sum.md) - [lc0015_3sum.cpp](problems/two_pointers/lc0015_3sum.cpp)
 - [80. Remove Duplicates from Sorted Array II](problems/two_pointers/lc0080_remove_duplicates_from_sorted_array_ii.md) - [lc0080_remove_duplicates_from_sorted_array_ii.cpp](problems/two_pointers/lc0080_remove_duplicates_from_sorted_array_ii.cpp)
 - [167. Two Sum II - Input Array Is Sorted](problems/two_pointers/lc0167_two_sum_ii_input_array_is_sorted.md) - [lc0167_two_sum_ii_input_array_is_sorted.cpp](problems/two_pointers/lc0167_two_sum_ii_input_array_is_sorted.cpp)
+- [344. Reverse String](problems/two_pointers/lc0344_reverse_string.md) - [lc0344_reverse_string.cpp](problems/two_pointers/lc0344_reverse_string.cpp)
 - In progress: [lc0042_trapping_rain_water.cpp](problems/two_pointers/lc0042_trapping_rain_water.cpp)
