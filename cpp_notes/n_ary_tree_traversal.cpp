@@ -3,39 +3,35 @@
 
 class Node {
 public:
-  int val;
+  int val = 0;
   std::vector<Node *> children;
 };
 
-class State {
+class NaryState {
 public:
   Node *node;
   int depth;
 
-  State(Node *node, int depth) : node(node), depth(depth) {}
+  NaryState(Node *node, int depth) : node(node), depth(depth) {}
 };
 
-class Solution {
-private:
-  std::vector<int> result;
-
+class NaryTreeTraversal {
 public:
   void traverse(Node *root) {
     if (root == nullptr) {
       return;
     }
 
-    // 前序位置
     for (Node *child : root->children) {
       traverse(child);
     }
-    // 后续位置
   }
 
-  void levelOrderTraverse(Node *root) {
+  void levelOrder(Node *root) {
     if (root == nullptr) {
       return;
     }
+
     std::queue<Node *> q;
     q.push(root);
 
@@ -49,7 +45,7 @@ public:
     }
   }
 
-  void levelOrderTravese2(Node *root) {
+  void levelOrderByLayer(Node *root) {
     if (root == nullptr) {
       return;
     }
@@ -57,12 +53,9 @@ public:
     std::queue<Node *> q;
     q.push(root);
 
-    int depth = 1; // 记录当前遍历到的层数（根节点视为第 1 层）
-
     while (!q.empty()) {
-      int sz = q.size();
-
-      for (int i = 0; i < sz; i++) {
+      int size = static_cast<int>(q.size());
+      for (int i = 0; i < size; i++) {
         Node *cur = q.front();
         q.pop();
 
@@ -70,30 +63,23 @@ public:
           q.push(child);
         }
       }
-      depth++;
     }
   }
 
-  void levelOrderTravese3(Node *root) {
+  void levelOrderWithDepth(Node *root) {
     if (root == nullptr) {
       return;
     }
 
-    std::queue<State> q;
-    q.push(State(root, 1));
-
-    int depth = 1; // 记录当前遍历到的层数（根节点视为第 1 层）
+    std::queue<NaryState> q;
+    q.push(NaryState(root, 1));
 
     while (!q.empty()) {
-      int sz = q.size();
+      NaryState cur = q.front();
+      q.pop();
 
-      for (int i = 0; i < sz; i++) {
-        State cur = q.front();
-        q.pop();
-
-        for (Node *child : cur.node->children) {
-          q.push(State(child, 1+depth));
-        }
+      for (Node *child : cur.node->children) {
+        q.push(NaryState(child, cur.depth + 1));
       }
     }
   }

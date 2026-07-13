@@ -1,4 +1,3 @@
-#include "../problems/common/nodes.h"
 #include <vector>
 
 using namespace std;
@@ -6,6 +5,7 @@ using namespace std;
 class Solution {
 public:
   int findDuplicate(vector<int> &nums) {
-    
+    (void)nums;
+    return 0;
   }
 };

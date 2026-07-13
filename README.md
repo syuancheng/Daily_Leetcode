@@ -44,6 +44,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [74. Search a 2D Matrix](problems/binary_search/lc0074_search_a_2d_matrix.md) - [lc0074_search_a_2d_matrix.cpp](problems/binary_search/lc0074_search_a_2d_matrix.cpp)
 - [153. Find Minimum in Rotated Sorted Array](problems/binary_search/lc0153_find_minimum_in_rotated_sorted_array.md) - [lc0153_find_minimum_in_rotated_sorted_array.cpp](problems/binary_search/lc0153_find_minimum_in_rotated_sorted_array.cpp)
 - [704. Binary Search](problems/binary_search/lc0704_binary_search.md) - [lc0704_binary_search.cpp](problems/binary_search/lc0704_binary_search.cpp)
+- In progress: [lc0287_find_the_duplicate_number.cpp](problems/binary_search/lc0287_find_the_duplicate_number.cpp)
 
 ### Design
 
@@ -54,6 +55,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [94. Binary Tree Inorder Traversal](problems/dfs/lc0094_binary_tree_inorder_traversal.md) - [lc0094_binary_tree_inorder_traversal.cpp](problems/dfs/lc0094_binary_tree_inorder_traversal.cpp)
 - [98. Validate Binary Search Tree](problems/dfs/lc0098_validate_binary_search_tree.md) - [lc0098_validate_binary_search_tree.cpp](problems/dfs/lc0098_validate_binary_search_tree.cpp)
 - [104. Maximum Depth of Binary Tree](problems/dfs/lc0104_maximum_depth_of_binary_tree.md) - [lc0104_maximum_depth_of_binary_tree.cpp](problems/dfs/lc0104_maximum_depth_of_binary_tree.cpp)
+- [111. Minimum Depth of Binary Tree](problems/dfs/lc0111_minimum_depth_of_binary_tree.md) - [lc0111_minimum_depth_of_binary_tree.cpp](problems/dfs/lc0111_minimum_depth_of_binary_tree.cpp)
 - [112. Path Sum](problems/dfs/lc0112_path_sum.md) - [lc0112_path_sum.cpp](problems/dfs/lc0112_path_sum.cpp)
 - [113. Path Sum II](problems/dfs/lc0113_path_sum_ii.md) - [lc0113_path_sum_ii.cpp](problems/dfs/lc0113_path_sum_ii.cpp)
 - [144. Binary Tree Preorder Traversal](problems/dfs/lc0144_binary_tree_preorder_traversal.md) - [lc0144_binary_tree_preorder_traversal.cpp](problems/dfs/lc0144_binary_tree_preorder_traversal.cpp)
@@ -68,6 +70,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 - [53. Maximum Subarray](problems/dynamic_programming/lc0053_maximum_subarray.md) - [lc0053_maximum_subarray.cpp](problems/dynamic_programming/lc0053_maximum_subarray.cpp)
 - [70. Climbing Stairs](problems/dynamic_programming/lc0070_climbing_stairs.md) - [lc0070_climbing_stairs.cpp](problems/dynamic_programming/lc0070_climbing_stairs.cpp)
+- [72. Edit Distance](problems/dynamic_programming/lc0072_edit_distance.md) - [lc0072_edit_distance.cpp](problems/dynamic_programming/lc0072_edit_distance.cpp)
 - In progress: [lc0322_coin_change.cpp](problems/dynamic_programming/lc0322_coin_change.cpp)
 
 ### JavaScript Basics
@@ -82,8 +85,12 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 ### Linked List
 
 - [2. Add Two Numbers](problems/linked_list/lc0002_add_two_numbers.md) - [lc0002_add_two_numbers.cpp](problems/linked_list/lc0002_add_two_numbers.cpp)
+- [19. Remove Nth Node From End of List](problems/linked_list/lc0019_remove_nth_node_from_end_of_list.md) - [lc0019_remove_nth_node_from_end_of_list.cpp](problems/linked_list/lc0019_remove_nth_node_from_end_of_list.cpp)
 - [21. Merge Two Sorted Lists](problems/linked_list/lc0021_merge_two_sorted_lists.md) - [lc0021_merge_two_sorted_lists.cpp](problems/linked_list/lc0021_merge_two_sorted_lists.cpp)
+- [23. Merge k Sorted Lists](problems/linked_list/lc0023_merge_k_sorted_lists.md) - [lc0023_merge_k_sorted_lists.cpp](problems/linked_list/lc0023_merge_k_sorted_lists.cpp)
 - [24. Swap Nodes in Pairs](problems/linked_list/lc0024_swap_nodes_in_pairs.md) - [lc0024_swap_nodes_in_pairs.cpp](problems/linked_list/lc0024_swap_nodes_in_pairs.cpp)
+- [25. Reverse Nodes in k-Group](problems/linked_list/lc0025_reverse_nodes_in_k_group.md) - [lc0025_reverse_nodes_in_k_group.cpp](problems/linked_list/lc0025_reverse_nodes_in_k_group.cpp)
+- [82. Remove Duplicates from Sorted List II](problems/linked_list/lc0082_remove_duplicates_from_sorted_list_ii.md) - [lc0082_remove_duplicates_from_sorted_list_ii.cpp](problems/linked_list/lc0082_remove_duplicates_from_sorted_list_ii.cpp)
 - [86. Partition List](problems/linked_list/lc0086_partition_list.md) - [lc0086_partition_list.cpp](problems/linked_list/lc0086_partition_list.cpp)
 - [92. Reverse Linked List II](problems/linked_list/lc0092_reverse_linked_list_ii.md) - [lc0092_reverse_linked_list_ii.cpp](problems/linked_list/lc0092_reverse_linked_list_ii.cpp)
 - [141. Linked List Cycle](problems/linked_list/lc0141_linked_list_cycle.md) - [lc0141_linked_list_cycle.cpp](problems/linked_list/lc0141_linked_list_cycle.cpp)
@@ -97,12 +104,12 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [237. Delete Node in a Linked List](problems/linked_list/lc0237_delete_node_in_a_linked_list.md) - [lc0237_delete_node_in_a_linked_list.cpp](problems/linked_list/lc0237_delete_node_in_a_linked_list.cpp)
 - [328. Odd Even Linked List](problems/linked_list/lc0328_odd_even_linked_list.md) - [lc0328_odd_even_linked_list.cpp](problems/linked_list/lc0328_odd_even_linked_list.cpp)
 - [382. Linked List Random Node](problems/linked_list/lc0382_linked_list_random_node.md) - [lc0382_linked_list_random_node.cpp](problems/linked_list/lc0382_linked_list_random_node.cpp)
+- [445. Add Two Numbers II](problems/linked_list/lc0445_add_two_numbers_ii.md) - [lc0445_add_two_numbers_ii.cpp](problems/linked_list/lc0445_add_two_numbers_ii.cpp)
 - [707. Design Linked List](problems/linked_list/lc0707_design_linked_list.md) - [lc0707_design_linked_list.cpp](problems/linked_list/lc0707_design_linked_list.cpp)
 - [725. Split Linked List in Parts](problems/linked_list/lc0725_split_linked_list_in_parts.md) - [lc0725_split_linked_list_in_parts.cpp](problems/linked_list/lc0725_split_linked_list_in_parts.cpp)
 - [876. Middle of the Linked List](problems/linked_list/lc0876_middle_of_the_linked_list.md) - [lc0876_middle_of_the_linked_list.cpp](problems/linked_list/lc0876_middle_of_the_linked_list.cpp)
 - [Interview. Reverse Halves and Keep Middle](problems/linked_list/interview_reverse_halves_keep_middle.md) - [interview_reverse_halves_keep_middle.cpp](problems/linked_list/interview_reverse_halves_keep_middle.cpp)
 - In progress: [Interview. Singly Linked List Basics](problems/linked_list/interview_singly_linked_list_basics.cpp)
-- In progress: [lc0023_merge_k_sorted_lists.cpp](problems/linked_list/lc0023_merge_k_sorted_lists.cpp)
 
 ### Math / Bit Manipulation
 
@@ -127,6 +134,8 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [179. Largest Number](problems/sorting_heap/lc0179_largest_number.md) - [lc0179_largest_number.cpp](problems/sorting_heap/lc0179_largest_number.cpp)
 - [215. Kth Largest Element in an Array](problems/sorting_heap/lc0215_kth_largest_element_in_an_array.md) - [lc0215_kth_largest_element_in_an_array.cpp](problems/sorting_heap/lc0215_kth_largest_element_in_an_array.cpp)
 - [347. Top K Frequent Elements](problems/sorting_heap/lc0347_top_k_frequent_elements.md) - [lc0347_top_k_frequent_elements.cpp](problems/sorting_heap/lc0347_top_k_frequent_elements.cpp)
+- [373. Find K Pairs with Smallest Sums](problems/sorting_heap/lc0373_find_k_pairs_with_smallest_sums.md) - [lc0373_find_k_pairs_with_smallest_sums.cpp](problems/sorting_heap/lc0373_find_k_pairs_with_smallest_sums.cpp)
+- [378. Kth Smallest Element in a Sorted Matrix](problems/sorting_heap/lc0378_kth_smallest_element_in_a_sorted_matrix.md) - [lc0378_kth_smallest_element_in_a_sorted_matrix.cpp](problems/sorting_heap/lc0378_kth_smallest_element_in_a_sorted_matrix.cpp)
 - [912. Sort an Array](problems/sorting_heap/lc0912_sort_an_array.md)
 
 ### Stack / Queue
