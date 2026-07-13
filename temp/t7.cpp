@@ -1,5 +1,4 @@
 #include "../problems/common/nodes.h"
-#include <vector>
 
 class Solution {
 public:
@@ -21,5 +20,25 @@ public:
     head->next = cur;
 
     return pre;
+  }
+};
+
+class Solution2 {
+private:
+  // 后驱节点,比如反转前两个节点，那就记录的第三个节点
+  ListNode *successor = nullptr;
+
+public:
+  ListNode *reverseN(ListNode *head, int n) {
+    if (n == 1) {
+      successor = head->next;
+      return head;
+    }
+
+    ListNode *last = reverseN(head->next, n - 1);
+    head->next->next = head;
+    head->next = successor;
+
+    return last;
   }
 };
