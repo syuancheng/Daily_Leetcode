@@ -1,6 +1,5 @@
 #include <string>
 #include <unordered_map>
-#include <unordered_set>
 #include <vector>
 
 /**
@@ -12,16 +11,16 @@ using namespace std;
 class Solution {
 public:
   vector<int> findAnagrams(string s, string p) {
-    unordered_map<char, int> need;
-    unordered_map<char, int> window;
-
+    unordered_map<char, int> need, window;
     for (char c : p) {
       need[c]++;
     }
 
     int left = 0, right = 0;
     int valid = 0;
+
     vector<int> res;
+
     while (right < s.size()) {
       char c = s[right];
       right++;
@@ -36,6 +35,7 @@ public:
         if (valid == need.size()) {
           res.push_back(left);
         }
+
         char d = s[left];
         left++;
         if (need.count(d)) {
