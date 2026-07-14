@@ -21,6 +21,7 @@ Search a target in a sorted array and return its index, or -1.
 ## My Solution
 
 ```cpp
+#include <cstddef>
 #include <vector>
 
 using namespace std;
@@ -28,19 +29,23 @@ using namespace std;
 class Solution {
 public:
   int search(vector<int> &nums, int target) {
-    int l = 0, r = nums.size() - 1;
-    while (l <= r) {
-      int mid = (r - l) / 2 + l;
-      if (nums[mid] == target) {
+    int left = 0;
+    int right = static_cast<int>(nums.size()) - 1;
+
+    while (left <= right) {
+      const int mid = left + (right - left) / 2;
+      const size_t index = static_cast<size_t>(mid);
+      if (nums[index] == target) {
         return mid;
       }
 
-      if (nums[mid] < target) {
-        l = mid+1;
+      if (nums[index] < target) {
+        left = mid + 1;
       } else {
-        r = mid -1;
+        right = mid - 1;
       }
     }
+
     return -1;
   }
 };

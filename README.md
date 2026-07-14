@@ -119,6 +119,11 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [371. Sum of Two Integers](problems/math_bit/lc0371_sum_of_two_integers.md) - [lc0371_sum_of_two_integers.cpp](problems/math_bit/lc0371_sum_of_two_integers.cpp)
 - [415. Add Strings](problems/math_bit/lc0415_add_strings.md) - [lc0415_add_strings.cpp](problems/math_bit/lc0415_add_strings.cpp)
 
+### Prefix Sum
+
+- [303. Range Sum Query - Immutable](problems/prefix_sum/lc0303_range_sum_query_immutable.md) - [lc0303_range_sum_query_immutable.cpp](problems/prefix_sum/lc0303_range_sum_query_immutable.cpp)
+- [304. Range Sum Query 2D - Immutable](problems/prefix_sum/lc0304_range_sum_query_2d_immutable.md) - [lc0304_range_sum_query_2d_immutable.cpp](problems/prefix_sum/lc0304_range_sum_query_2d_immutable.cpp)
+
 ### Sliding Window
 
 - [3. Longest Substring Without Repeating Characters](problems/sliding_window/lc0003_longest_substring_without_repeating_characters.md) - [lc0003_longest_substring_without_repeating_characters.cpp](problems/sliding_window/lc0003_longest_substring_without_repeating_characters.cpp)
