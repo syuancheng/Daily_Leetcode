@@ -31,7 +31,8 @@ public:
   }
 
   void add(int index, E e) {
-    
+    (void)index;
+    (void)e;
   }
 
   bool isElementIndex(int index) { return index >= 0 && index < size; }

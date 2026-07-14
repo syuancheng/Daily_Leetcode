@@ -1,5 +1,5 @@
 
-
+#include <cstddef>
 #include <functional>
 #include <iostream>
 #include <string>
@@ -10,14 +10,14 @@ using namespace std;
 class BloomFilter {
 private:
   vector<bool> bits;
-  int size;
+  size_t size;
 
   size_t hash1(const string &s) const { return hash<string>{}(s) % size; }
 
   size_t hash2(const string &s) const {
     size_t h = 0;
     for (char c : s) {
-      h = h * 131 + c;
+      h = h * 131 + static_cast<unsigned char>(c);
     }
     return h % size;
   }
@@ -25,13 +25,13 @@ private:
   size_t hash3(const string &s) const {
     size_t h = 5381;
     for (char c : s) {
-      h = ((h << 5) + h) + c; // h * 33 + c
+      h = ((h << 5) + h) + static_cast<unsigned char>(c); // h * 33 + c
     }
     return h % size;
   }
 
 public:
-  BloomFilter(int n) : bits(n, false), size(n) {}
+  explicit BloomFilter(size_t n) : bits(n, false), size(n) {}
 
   void add(const string &key) {
     bits[hash1(key)] = true;

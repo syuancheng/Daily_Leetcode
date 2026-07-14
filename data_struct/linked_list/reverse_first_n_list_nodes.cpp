@@ -1,4 +1,4 @@
-#include "../problems/common/nodes.h"
+#include "../../problems/common/nodes.h"
 
 class ReverseFirstNListNodesIterative {
 public:

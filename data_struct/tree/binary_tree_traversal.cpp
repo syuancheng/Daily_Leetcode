@@ -1,4 +1,4 @@
-#include "../problems/common/nodes.h"
+#include "../../problems/common/nodes.h"
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -11,14 +11,25 @@ public:
   TreeState(TreeNode *node, int depth) : node(node), depth(depth) {}
 };
 
+// 二叉树的递归遍历框架
 void traverse(TreeNode *root) {
   if (root == nullptr) {
     return;
   }
 
   std::cout << "enter " << root->val << '\n';
+
+  /**
+   * 三次经过一个节点：
+   * 前序：第一次进入该节点。
+   * 中序：该节点的左子树访问完，回退到该节点，准备遍历右子树。
+   * 后序：该节点的左右子树都访问完，准备向父节点回退。
+   */
+  // 前序位置
   traverse(root->left);
+  // 中序位置
   traverse(root->right);
+  // 后序位置
 }
 
 class BinaryTreeTraversal {
@@ -31,9 +42,12 @@ public:
       return;
     }
 
+    // 前序位置
     result.push_back(root->val);
     preorder(root->left);
+    // 中序位置
     preorder(root->right);
+    // 后序位置
   }
 
   void inorder(TreeNode *root) {
@@ -41,9 +55,12 @@ public:
       return;
     }
 
+    // 前序位置
     inorder(root->left);
+    // 中序位置
     result.push_back(root->val);
     inorder(root->right);
+    // 后序位置
   }
 
   void postorder(TreeNode *root) {
@@ -51,8 +68,11 @@ public:
       return;
     }
 
+    // 前序位置
     postorder(root->left);
+    // 中序位置
     postorder(root->right);
+    // 后序位置
     result.push_back(root->val);
   }
 
@@ -85,6 +105,8 @@ public:
 
     std::queue<TreeNode *> q;
     q.push(root);
+    // 记录当前遍历到的层数，根节点视为第 1 层。
+    [[maybe_unused]] int depth = 1;
 
     while (!q.empty()) {
       int size = static_cast<int>(q.size());
@@ -99,6 +121,7 @@ public:
           q.push(cur->right);
         }
       }
+      depth++;
     }
   }
 

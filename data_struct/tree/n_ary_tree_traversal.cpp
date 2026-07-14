@@ -22,9 +22,11 @@ public:
       return;
     }
 
+    // 前序位置
     for (Node *child : root->children) {
       traverse(child);
     }
+    // 后序位置
   }
 
   void levelOrder(Node *root) {
@@ -52,6 +54,8 @@ public:
 
     std::queue<Node *> q;
     q.push(root);
+    // 记录当前遍历到的层数，根节点视为第 1 层。
+    [[maybe_unused]] int depth = 1;
 
     while (!q.empty()) {
       int size = static_cast<int>(q.size());
@@ -63,6 +67,7 @@ public:
           q.push(child);
         }
       }
+      depth++;
     }
   }
 
