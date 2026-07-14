@@ -33,6 +33,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [199. Binary Tree Right Side View](problems/bfs/lc0199_right_side_view.md) - [lc0199_right_side_view.cpp](problems/bfs/lc0199_right_side_view.cpp)
 - [200. Number of Islands](problems/bfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/bfs/lc0200_number_of_islands.cpp)
 - [207. Course Schedule](problems/bfs/lc0207_course_schedule.md) - [lc0207_course_schedule.cpp](problems/bfs/lc0207_course_schedule.cpp)
+- [210. Course Schedule II](problems/bfs/lc0210_course_schedule_ii.md) - [lc0210_course_schedule_ii.cpp](problems/bfs/lc0210_course_schedule_ii.cpp)
 - [994. Rotting Oranges](problems/bfs/lc0994_rotting_oranges.md) - [lc0994_rotting_oranges.cpp](problems/bfs/lc0994_rotting_oranges.cpp)
 
 ### Binary Search
@@ -44,6 +45,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [74. Search a 2D Matrix](problems/binary_search/lc0074_search_a_2d_matrix.md) - [lc0074_search_a_2d_matrix.cpp](problems/binary_search/lc0074_search_a_2d_matrix.cpp)
 - [153. Find Minimum in Rotated Sorted Array](problems/binary_search/lc0153_find_minimum_in_rotated_sorted_array.md) - [lc0153_find_minimum_in_rotated_sorted_array.cpp](problems/binary_search/lc0153_find_minimum_in_rotated_sorted_array.cpp)
 - [704. Binary Search](problems/binary_search/lc0704_binary_search.md) - [lc0704_binary_search.cpp](problems/binary_search/lc0704_binary_search.cpp)
+- [875. Koko Eating Bananas](problems/binary_search/lc0875_koko_eating_bananas.md) - [lc0875_koko_eating_bananas.cpp](problems/binary_search/lc0875_koko_eating_bananas.cpp)
 - In progress: [lc0287_find_the_duplicate_number.cpp](problems/binary_search/lc0287_find_the_duplicate_number.cpp)
 
 ### Design
@@ -148,6 +150,8 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 ### Stack / Queue
 
 - [20. Valid Parentheses](problems/stack_queue/lc0020_valid_parentheses.md) - [lc0020_valid_parentheses.cpp](problems/stack_queue/lc0020_valid_parentheses.cpp)
+- [225. Implement Stack using Queues](problems/stack_queue/lc0225_implement_stack_using_queues.md) - [lc0225_implement_stack_using_queues.cpp](problems/stack_queue/lc0225_implement_stack_using_queues.cpp)
+- [232. Implement Queue using Stacks](problems/stack_queue/lc0232_implement_queue_using_stacks.md) - [lc0232_implement_queue_using_stacks.cpp](problems/stack_queue/lc0232_implement_queue_using_stacks.cpp)
 - [933. Number of Recent Calls](problems/stack_queue/lc0933_number_of_recent_calls.md) - [lc0933_number_of_recent_calls.cpp](problems/stack_queue/lc0933_number_of_recent_calls.cpp)
 
 ### Two Pointers
