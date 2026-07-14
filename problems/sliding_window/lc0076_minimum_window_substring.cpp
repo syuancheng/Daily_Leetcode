@@ -30,6 +30,7 @@ public:
       }
 
       while (valid == need.size()) {
+        //[0,2) len=2, {0, 1}
         if (right - left < len) {
           start = left;
           len = right - left;
