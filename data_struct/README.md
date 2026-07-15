@@ -8,6 +8,8 @@ notes and problem-solving tips in `cpp_notes/`.
 
 ## Graph
 
+- [BFS traversal templates](graph/bfs_traversal.cpp): plain queue BFS,
+  layer-by-layer BFS, and state-carrying BFS.
 - [Graph traversal templates](graph/graph_traversal.cpp): vertex traversal with
   `visited`, edge traversal with `edgeVisited`, and simple path enumeration with
   `onPath`.
