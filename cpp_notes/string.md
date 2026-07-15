@@ -39,6 +39,39 @@
 | string → int | `stoi("123")` |
 | string → long long | `stoll("123")` |
 
+### split
+C++ `std::string` 没有 Go `strings.Split` 那样的内置方法，可以自己写一个 helper。
+
+```cpp
+std::vector<std::string> split(const std::string &s,
+                               const std::string &separator) {
+  std::vector<std::string> result;
+
+  if (separator.empty()) {
+    for (char c : s) {
+      result.push_back(std::string(1, c));
+    }
+    return result;
+  }
+
+  size_t start = 0;
+  while (true) {
+    size_t pos = s.find(separator, start);
+    if (pos == std::string::npos) {
+      result.push_back(s.substr(start));
+      break;
+    }
+
+    result.push_back(s.substr(start, pos - start));
+    start = pos + separator.size();
+  }
+
+  return result;
+}
+```
+
+完整 helper 在 [string_split.cpp](string_split.cpp)。
+
 ### 与 vector 的区别
 | 操作 | vector | string |
 |------|--------|--------|
