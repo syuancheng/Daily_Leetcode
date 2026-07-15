@@ -40,6 +40,9 @@ private:
   }
 
   void buildGraph(int numCourses, const vector<vector<int>> &prerequisites) {
+    /**
+      prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi, bi -> ai
+    */
     graph.assign(static_cast<size_t>(numCourses), {});
     for (const vector<int> &edge : prerequisites) {
       if (edge.size() < 2) {
