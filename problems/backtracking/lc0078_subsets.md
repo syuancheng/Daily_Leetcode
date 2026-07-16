@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: HH
+- Attempts: HHH
 - Status: Familiar
 
 ## Link
@@ -35,26 +35,23 @@ class Solution {
 private:
   vector<vector<int>> result;
 
+  vector<int> track;
+
 public:
-  void dfs(vector<int> &current, vector<int> &remain, int start) {
-    result.push_back(current);
-
-    for (int i = start; i < remain.size(); ++i) {
-      current.push_back(remain[i]);
-
-      dfs(current, remain, i + 1);
-
-      current.pop_back();
-    }
-  }
   vector<vector<int>> subsets(vector<int> &nums) {
-    if (nums.empty()) {
-      result.push_back({});
-      return result;
-    }
-    vector<int> curr;
-    dfs(curr, nums, 0);
+    backtrack(nums, 0);
     return result;
+  }
+
+  void backtrack(vector<int> &nums, int start) {
+
+    result.push_back(track); // 这里是节点的前序位置，每个节点的值都是一个子集。
+
+    for (int i = start; i < nums.size(); i++) {
+      track.push_back(nums[i]);
+      backtrack(nums, i + 1);
+      track.pop_back();
+    }
   }
 };
 ```
