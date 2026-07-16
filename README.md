@@ -19,7 +19,10 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 ### Backtracking
 
+- [37. Sudoku Solver](problems/backtracking/lc0037_sudoku_solver.md) - [lc0037_sudoku_solver.cpp](problems/backtracking/lc0037_sudoku_solver.cpp)
 - [46. Permutations](problems/backtracking/lc0046_permutations.md) - [lc0046_permutations.cpp](problems/backtracking/lc0046_permutations.cpp)
+- [51. N-Queens](problems/backtracking/lc0051_n_queens.md) - [lc0051_n_queens.cpp](problems/backtracking/lc0051_n_queens.cpp)
+- [52. N-Queens II](problems/backtracking/lc0052_n_queens_ii.md) - [lc0052_n_queens_ii.cpp](problems/backtracking/lc0052_n_queens_ii.cpp)
 - [77. Combinations](problems/backtracking/lc0077_combinations.md) - [lc0077_combinations.cpp](problems/backtracking/lc0077_combinations.cpp)
 - [78. Subsets](problems/backtracking/lc0078_subsets.md) - [lc0078_subsets.cpp](problems/backtracking/lc0078_subsets.cpp)
 - [93. Restore IP Addresses](problems/backtracking/lc0093_restore_ip_addresses.md) - [lc0093_restore_ip_addresses.cpp](problems/backtracking/lc0093_restore_ip_addresses.cpp)
