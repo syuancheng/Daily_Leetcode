@@ -66,7 +66,7 @@ void demoCapacityAndModify() {
   cout << "pop_back: ";
   printVector(nums);
 
-  nums.resize(5, 7);
+  nums.resize(5, 7); // Change size to 5; new elements are filled with 7.
   cout << "resize(5, 7): ";
   printVector(nums);
 
@@ -82,7 +82,7 @@ void demoAlgorithms() {
   cout << "original: ";
   printVector(nums);
 
-  sort(nums.begin(), nums.end());
+  sort(nums.begin(), nums.end());//默认是升序
   cout << "sort: ";
   printVector(nums);
 
@@ -96,6 +96,8 @@ void demoAlgorithms() {
   cout << "sort + unique + erase: ";
   printVector(nums);
 
+  //lower_bound: 第一个 >= target
+  //upper_bound: 第一个 > target
   auto it = lower_bound(nums.begin(), nums.end(), 3);
   cout << "lower_bound 3 index: " << distance(nums.begin(), it) << '\n';
 
@@ -155,12 +157,12 @@ void practiceArea() {
 int main() {
   cout << boolalpha;
 
-  demoConstructionAndAccess();
-  demoCapacityAndModify();
-  demoAlgorithms();
-  demoRemoveAndFilter();
+  // demoConstructionAndAccess();
+  // demoCapacityAndModify();
+  // demoAlgorithms();
+  // demoRemoveAndFilter();
   demoTwoDimensionalVector();
-  practiceArea();
+  // practiceArea();
 
   return 0;
 }
