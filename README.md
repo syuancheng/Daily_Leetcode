@@ -20,11 +20,15 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 ### Backtracking
 
 - [37. Sudoku Solver](problems/backtracking/lc0037_sudoku_solver.md) - [lc0037_sudoku_solver.cpp](problems/backtracking/lc0037_sudoku_solver.cpp)
+- [39. Combination Sum](problems/backtracking/lc0039_combination_sum.md) - [lc0039_combination_sum.cpp](problems/backtracking/lc0039_combination_sum.cpp)
+- [40. Combination Sum II](problems/backtracking/lc0040_combination_sum_ii.md) - [lc0040_combination_sum_ii.cpp](problems/backtracking/lc0040_combination_sum_ii.cpp)
 - [46. Permutations](problems/backtracking/lc0046_permutations.md) - [lc0046_permutations.cpp](problems/backtracking/lc0046_permutations.cpp)
+- [47. Permutations II](problems/backtracking/lc0047_permutations_ii.md) - [lc0047_permutations_ii.cpp](problems/backtracking/lc0047_permutations_ii.cpp)
 - [51. N-Queens](problems/backtracking/lc0051_n_queens.md) - [lc0051_n_queens.cpp](problems/backtracking/lc0051_n_queens.cpp)
 - [52. N-Queens II](problems/backtracking/lc0052_n_queens_ii.md) - [lc0052_n_queens_ii.cpp](problems/backtracking/lc0052_n_queens_ii.cpp)
 - [77. Combinations](problems/backtracking/lc0077_combinations.md) - [lc0077_combinations.cpp](problems/backtracking/lc0077_combinations.cpp)
 - [78. Subsets](problems/backtracking/lc0078_subsets.md) - [lc0078_subsets.cpp](problems/backtracking/lc0078_subsets.cpp)
+- [90. Subsets II](problems/backtracking/lc0090_subsets_ii.md) - [lc0090_subsets_ii.cpp](problems/backtracking/lc0090_subsets_ii.cpp)
 - [93. Restore IP Addresses](problems/backtracking/lc0093_restore_ip_addresses.md) - [lc0093_restore_ip_addresses.cpp](problems/backtracking/lc0093_restore_ip_addresses.cpp)
 - [131. Palindrome Partitioning](problems/backtracking/lc0131_palindrome_partitioning.md) - [lc0131_palindrome_partitioning.cpp](problems/backtracking/lc0131_palindrome_partitioning.cpp)
 

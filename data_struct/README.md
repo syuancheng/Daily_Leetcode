@@ -13,3 +13,8 @@ notes and problem-solving tips in `cpp_notes/`.
 - [Graph traversal templates](graph/graph_traversal.cpp): vertex traversal with
   `visited`, edge traversal with `edgeVisited`, and simple path enumeration with
   `onPath`.
+
+## Backtracking
+
+- [Permutations with repetition](backtracking/permutations_with_repetition.cpp):
+  generate length-`k` sequences where each position can reuse any input value.
