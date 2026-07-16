@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: H
+- Attempts: HH
 - Status: Beginner
 
 ## Link
