@@ -6,5 +6,8 @@
   "[cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && clang++ -std=c++17 -Wall -Wextra -Wpedantic -Wconversion $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+  },
   "cmake.sourceDirectory": "/Users/siyuancheng/Documents/cpp_workspace/Daily_Leetcode/cpp_notes/brpc/bthread"
 }

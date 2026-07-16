@@ -70,12 +70,14 @@ void demoMapBounds() {
 
   auto lower = table.lower_bound(20);
   if (lower != table.end()) {
-    cout << "lower_bound(20): " << lower->first << " -> " << lower->second << '\n';
+    cout << "lower_bound(20): " << lower->first << " -> " << lower->second
+         << '\n';
   }
 
   auto upper = table.upper_bound(20);
   if (upper != table.end()) {
-    cout << "upper_bound(20): " << upper->first << " -> " << upper->second << '\n';
+    cout << "upper_bound(20): " << upper->first << " -> " << upper->second
+         << '\n';
   }
 
   cout << "iterate key/value:\n";
@@ -94,8 +96,8 @@ void demoOperatorBracketTrap() {
   cout << "size after operator[]: " << counter.size() << '\n';
 
   map<string, int> safer;
-  cout << "safer.find(\"missing\") exists: " << (safer.find("missing") != safer.end())
-       << '\n';
+  cout << "safer.find(\"missing\") exists: "
+       << (safer.find("missing") != safer.end()) << '\n';
   cout << "size after find: " << safer.size() << '\n';
 }
 
@@ -141,18 +143,19 @@ void practiceArea() {
   // Practice 2: find the first character whose frequency is 1.
   // Practice 3: group words by their first letter.
   // Practice 4: use map<int, int> to count sorted number frequencies.
-  cout << "Edit practiceArea() or add your own functions, then rerun this file.\n";
+  cout << "Edit practiceArea() or add your own functions, then rerun this "
+          "file.\n";
 }
 
 int main() {
   cout << boolalpha;
 
-  demoMapBasic();
-  demoMapBounds();
-  demoOperatorBracketTrap();
-  demoUnorderedMapFrequency();
+  // demoMapBasic();
+  // demoMapBounds();
+  // demoOperatorBracketTrap();
+  // demoUnorderedMapFrequency();
   demoGroupByMap();
-  practiceArea();
+  // practiceArea();
 
   return 0;
 }
