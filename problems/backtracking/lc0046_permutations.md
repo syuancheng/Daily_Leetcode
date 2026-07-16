@@ -7,7 +7,7 @@
 
 ## Mastery
 
-- Attempts: OOHHO
+- Attempts: OOHHOO
 - Status: Familiar
 
 ## Link
@@ -25,30 +25,32 @@ class Solution {
 private:
   vector<vector<int>> result;
 
+  vector<int> track;
+
 public:
-  void dfs(vector<int> &current, vector<int> &nums) {
-    if (nums.empty()) {
-      result.push_back(current);
+  vector<vector<int>> permute(vector<int> &nums) {
+    vector<bool> used(nums.size(), false);
+    backtrack(nums, used);
+    return result;
+  }
+
+  void backtrack(const vector<int> &nums, vector<bool> &used) {
+    if (track.size() == nums.size()) {
+      result.push_back(track);
       return;
     }
 
-    for (int i = 0; i < nums.size(); ++i) {
-      current.push_back(nums[i]);
-      nums.erase(nums.begin() + i);
+    for (int i = 0; i < nums.size(); i++) {
+      if (used[i]) {
+        continue;
+      }
 
-      dfs(current, nums);
-
-      nums.insert(nums.begin() + i, current.back());
-      current.pop_back();
+      track.push_back(nums[i]);
+      used[i] = true;
+      backtrack(nums, used);
+      track.pop_back();
+      used[i] = false;
     }
-  }
-  vector<vector<int>> permute(vector<int> &nums) {
-    if (nums.empty()) {
-      return {};
-    }
-    vector<int> current;
-    dfs(current, nums);
-    return result;
   }
 };
 
