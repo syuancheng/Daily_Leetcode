@@ -16,5 +16,8 @@ notes and problem-solving tips in `cpp_notes/`.
 
 ## Backtracking
 
+- [Backtracking search shapes](backtracking/backtracking_search_shapes.cpp):
+  compare choose/permutation templates across distinct values, duplicate values,
+  and reusable values.
 - [Permutations with repetition](backtracking/permutations_with_repetition.cpp):
   generate length-`k` sequences where each position can reuse any input value.
