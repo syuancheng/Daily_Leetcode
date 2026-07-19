@@ -1,31 +1,29 @@
-#include <cstddef>
+#include <cstdint>
+#include <queue>
 #include <vector>
 
 using namespace std;
 
-class PermutationsWithRepetition {
+class Solution {
 public:
-  vector<vector<int>> generate(const vector<int> &values, size_t length) {
-    result_.clear();
-    path_.clear();
-    backtrack(values, length);
-    return result_;
+  vector<vector<int>> res;
+  deque<int> track;
+
+  vector<vector<int>> permuteRepeat(vector<int> &nums) {
+    backtrack(nums);
+    return res;
   }
 
-private:
-  vector<vector<int>> result_;
-  vector<int> path_;
-
-  void backtrack(const vector<int> &values, size_t length) {
-    if (path_.size() == length) {
-      result_.push_back(path_);
+  void backtrack(const vector<int> &nums) {
+    if (track.size() == nums.size()) {
+      res.push_back({track.begin(), track.end()});
       return;
     }
 
-    for (int value : values) {
-      path_.push_back(value);
-      backtrack(values, length);
-      path_.pop_back();
+    for (int i = 0; i < nums.size(); i++) {
+      track.push_back(nums[i]);
+      backtrack(nums);
+      track.pop_back();
     }
   }
 };

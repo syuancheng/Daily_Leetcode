@@ -1,209 +1,125 @@
-#include <algorithm>
-#include <cstddef>
+#include <cmath>
 #include <vector>
 
 using namespace std;
+// 形式一、元素无重不可复选，即 nums
+// 中的元素都是唯一的，每个元素最多只能被使用一次.
 
-namespace backtracking_search_shapes {
-
-// Distinct values, each index can be chosen at most once.
-// Typical problems: subsets and combinations without duplicate input values.
-class DistinctChooseOnce {
-public:
-  vector<vector<int>> subsets(vector<int> nums) {
-    result_.clear();
-    path_.clear();
-    backtrack(nums, 0);
-    return result_;
-  }
-
+// 组合、子集
+class Solution1 {
 private:
-  vector<vector<int>> result_;
-  vector<int> path_;
+  vector<int> track;
 
-  void backtrack(const vector<int> &nums, size_t start) {
-    result_.push_back(path_);
-
-    for (size_t i = start; i < nums.size(); ++i) {
-      path_.push_back(nums[i]);
+public:
+  void backtrack(std::vector<int> &nums, int start) {
+    for (int i = start; i < nums.size(); i++) {
+      track.push_back(nums[i]);
       backtrack(nums, i + 1);
-      path_.pop_back();
+      track.pop_back();
     }
   }
 };
 
-// Distinct values, each index can be used once, and order matters.
-// Typical problem: permutations.
-class DistinctPermuteOnce {
-public:
-  vector<vector<int>> permute(vector<int> nums) {
-    result_.clear();
-    path_.clear();
-    used_.assign(nums.size(), false);
-    backtrack(nums);
-    return result_;
-  }
-
+// 排列
+class Solution2 {
 private:
-  vector<vector<int>> result_;
-  vector<int> path_;
-  vector<bool> used_;
+  vector<int> track;
 
-  void backtrack(const vector<int> &nums) {
-    if (path_.size() == nums.size()) {
-      result_.push_back(path_);
-      return;
-    }
+  vector<bool> used;
 
-    for (size_t i = 0; i < nums.size(); ++i) {
-      if (used_[i]) {
+public:
+  void backtrack(std::vector<int> &nums) {
+    for (int i = 0; i < nums.size(); i++) {
+      if (used[i]) {
         continue;
       }
-
-      used_[i] = true;
-      path_.push_back(nums[i]);
+      used[i] == true;
+      track.push_back(nums[i]);
       backtrack(nums);
-      path_.pop_back();
-      used_[i] = false;
+      track.pop_back();
+      used[i] = false;
     }
   }
 };
 
-// Duplicate values, each index can be chosen at most once.
-// Sort first, then skip duplicate choices on the same tree level.
-// Typical problems: subsets II and combination sum II.
-class DuplicateChooseOnce {
-public:
-  vector<vector<int>> subsetsWithDup(vector<int> nums) {
-    sort(nums.begin(), nums.end());
-    result_.clear();
-    path_.clear();
-    backtrack(nums, 0);
-    return result_;
-  }
-
+// 形式二、元素可重不可复选，即 nums
+// 中的元素可以存在重复，每个元素最多只能被使用一次，其关键在于排序和剪枝
+// 组合，子集
+class Solution3 {
 private:
-  vector<vector<int>> result_;
-  vector<int> path_;
+  vector<int> track;
 
-  void backtrack(const vector<int> &nums, size_t start) {
-    result_.push_back(path_);
+public:
+  // sort nums at first
+  void backtrack(vector<int> &nums, int start) {
 
-    for (size_t i = start; i < nums.size(); ++i) {
-      if (i > start && nums[i] == nums[i - 1]) {
+    for (int i = start; i < nums.size(); i++) {
+      if (i > start && nums[i - 1] == nums[i]) {
         continue;
       }
 
-      path_.push_back(nums[i]);
+      track.push_back(nums[i]);
       backtrack(nums, i + 1);
-      path_.pop_back();
+      track.pop_back();
     }
   }
 };
 
-// Duplicate values, each index can be used once, and order matters.
-// Sort first. If the previous equal value is unused in this branch, choosing
-// the later equal value first would create duplicate permutations.
-class DuplicatePermuteOnce {
-public:
-  vector<vector<int>> permuteUnique(vector<int> nums) {
-    sort(nums.begin(), nums.end());
-    result_.clear();
-    path_.clear();
-    used_.assign(nums.size(), false);
-    backtrack(nums);
-    return result_;
-  }
-
+class Solution4 {
 private:
-  vector<vector<int>> result_;
-  vector<int> path_;
-  vector<bool> used_;
+  vector<int> track;
 
-  void backtrack(const vector<int> &nums) {
-    if (path_.size() == nums.size()) {
-      result_.push_back(path_);
-      return;
+public:
+  // sort nums at first
+  void backtrack(vector<int> &nums, vector<bool> &used) {
+
+    for (int i = 0; i < nums.size(); i++) {
+      if (used[i]) {
+        continue;
+      }
+
+      if (i > 0 && nums[i] == nums[i - 1] &&
+          !used[i - 1]) { // 为了避免出现122' 12'2
+                          // 这种情况，我们要限制，只有当2被使用后，才能使用2'
+        continue;
+      }
+
+      used[i] = true;
+      track.push_back(nums[i]);
+      backtrack(nums, used);
+      track.pop_back();
+      used[i] = false;
     }
+  }
+};
 
-    for (size_t i = 0; i < nums.size(); ++i) {
-      if (used_[i]) {
-        continue;
-      }
-      if (i > 0 && nums[i] == nums[i - 1] && !used_[i - 1]) {
-        continue;
-      }
+// 形式三、元素无重可复选，即 nums
+// 中的元素都是唯一的，每个元素可以被使用若干次，只要删掉去重逻辑即可
+// 子集，组合
+class Solution5 {
+private:
+  vector<int> track;
 
-      used_[i] = true;
-      path_.push_back(nums[i]);
+public:
+  void backtrack(vector<int> &nums, int start) {
+    for (int i = start; i < nums.size(); i++) {
+      track.push_back(nums[i]);
+      backtrack(nums, i);
+      track.pop_back();
+    }
+  }
+};
+// 排列
+class Solution6 {
+private:
+  vector<int> track;
+
+public:
+  void backtrack(vector<int> &nums) {
+    for (int i = 0; i < nums.size(); i++) {
+      track.push_back(nums[i]);
       backtrack(nums);
-      path_.pop_back();
-      used_[i] = false;
+      track.pop_back();
     }
   }
 };
-
-// Distinct values, each value can be chosen repeatedly, and order does not
-// matter. Typical problem: combination sum.
-class DistinctChooseRepeat {
-public:
-  vector<vector<int>> combinationSum(vector<int> nums, int target) {
-    sort(nums.begin(), nums.end());
-    result_.clear();
-    path_.clear();
-    backtrack(nums, 0, target);
-    return result_;
-  }
-
-private:
-  vector<vector<int>> result_;
-  vector<int> path_;
-
-  void backtrack(const vector<int> &nums, size_t start, int remaining) {
-    if (remaining == 0) {
-      result_.push_back(path_);
-      return;
-    }
-
-    for (size_t i = start; i < nums.size(); ++i) {
-      if (nums[i] > remaining) {
-        break;
-      }
-
-      path_.push_back(nums[i]);
-      backtrack(nums, i, remaining - nums[i]);
-      path_.pop_back();
-    }
-  }
-};
-
-// Distinct values, each value can be chosen repeatedly, and order matters.
-// A length limit is required; otherwise recursion has no natural stop.
-class DistinctPermuteRepeat {
-public:
-  vector<vector<int>> generate(vector<int> nums, size_t length) {
-    result_.clear();
-    path_.clear();
-    backtrack(nums, length);
-    return result_;
-  }
-
-private:
-  vector<vector<int>> result_;
-  vector<int> path_;
-
-  void backtrack(const vector<int> &nums, size_t length) {
-    if (path_.size() == length) {
-      result_.push_back(path_);
-      return;
-    }
-
-    for (int value : nums) {
-      path_.push_back(value);
-      backtrack(nums, length);
-      path_.pop_back();
-    }
-  }
-};
-
-} // namespace backtracking_search_shapes
