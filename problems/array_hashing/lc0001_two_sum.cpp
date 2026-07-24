@@ -25,11 +25,13 @@ target  的那 两个 整数，并返回它们的数组下标。
 class Solution {
 public:
   vector<int> twoSum(vector<int> &nums, int target) {
+    unordered_map<int, int> m; // num, index
+    for (int i = 0; i < nums.size(); i++) {
+      if (m.count(target - nums[i]) == 1) {
+        return {i, m[target - nums[i]]};
+      }
+      m.insert({nums[i], i});
+    }
+    return vector<int>();
   }
 };
-
-std::vector<int> twoSum(std::vector<int> &nums, int target) {
-}
-
-int main() {
-}
