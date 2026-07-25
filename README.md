@@ -31,6 +31,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [90. Subsets II](problems/backtracking/lc0090_subsets_ii.md) - [lc0090_subsets_ii.cpp](problems/backtracking/lc0090_subsets_ii.cpp)
 - [93. Restore IP Addresses](problems/backtracking/lc0093_restore_ip_addresses.md) - [lc0093_restore_ip_addresses.cpp](problems/backtracking/lc0093_restore_ip_addresses.cpp)
 - [131. Palindrome Partitioning](problems/backtracking/lc0131_palindrome_partitioning.md) - [lc0131_palindrome_partitioning.cpp](problems/backtracking/lc0131_palindrome_partitioning.cpp)
+- [967. Numbers With Same Consecutive Differences](problems/backtracking/lc0967_numbers_with_same_consecutive_differences.md) - [lc0967_numbers_with_same_consecutive_differences.cpp](problems/backtracking/lc0967_numbers_with_same_consecutive_differences.cpp)
 
 ### BFS
 
@@ -41,6 +42,8 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [200. Number of Islands](problems/bfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/bfs/lc0200_number_of_islands.cpp)
 - [207. Course Schedule](problems/bfs/lc0207_course_schedule.md) - [lc0207_course_schedule.cpp](problems/bfs/lc0207_course_schedule.cpp)
 - [210. Course Schedule II](problems/bfs/lc0210_course_schedule_ii.md) - [lc0210_course_schedule_ii.cpp](problems/bfs/lc0210_course_schedule_ii.cpp)
+- [752. Open the Lock](problems/bfs/lc0752_open_the_lock.md) - [lc0752_open_the_lock.cpp](problems/bfs/lc0752_open_the_lock.cpp)
+- [773. Sliding Puzzle](problems/bfs/lc0773_sliding_puzzle.md) - [lc0773_sliding_puzzle.cpp](problems/bfs/lc0773_sliding_puzzle.cpp)
 - [994. Rotting Oranges](problems/bfs/lc0994_rotting_oranges.md) - [lc0994_rotting_oranges.cpp](problems/bfs/lc0994_rotting_oranges.cpp)
 
 ### Binary Search
@@ -72,7 +75,10 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [200. Number of Islands](problems/dfs/lc0200_number_of_islands.md) - [lc0200_number_of_islands.cpp](problems/dfs/lc0200_number_of_islands.cpp)
 - [297. Serialize and Deserialize Binary Tree](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.md) - [lc0297_serialize_and_deserialize_binary_tree.cpp](problems/dfs/lc0297_serialize_and_deserialize_binary_tree.cpp)
 - [543. Diameter of Binary Tree](problems/dfs/lc0543_diameter_of_binary_tree.md) - [lc0543_diameter_of_binary_tree.cpp](problems/dfs/lc0543_diameter_of_binary_tree.cpp)
+- [694. Number of Distinct Islands](problems/dfs/lc0694_number_of_distinct_islands.md) - [lc0694_number_of_distinct_islands.cpp](problems/dfs/lc0694_number_of_distinct_islands.cpp)
 - [695. Max Area of Island](problems/dfs/lc0695_max_area_of_island.md) - [lc0695_max_area_of_island.cpp](problems/dfs/lc0695_max_area_of_island.cpp)
+- [1254. Number of Closed Islands](problems/dfs/lc1254_number_of_closed_islands.md) - [lc1254_number_of_closed_islands.cpp](problems/dfs/lc1254_number_of_closed_islands.cpp)
+- [1905. Count Sub Islands](problems/dfs/lc1905_count_sub_islands.md) - [lc1905_count_sub_islands.cpp](problems/dfs/lc1905_count_sub_islands.cpp)
 - In progress: [lc0236_lowest_common_ancestor_of_a_binary_tree.cpp](problems/dfs/lc0236_lowest_common_ancestor_of_a_binary_tree.cpp)
 
 ### Dynamic Programming
@@ -144,6 +150,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 
 - [5. Longest Palindromic Substring](problems/string/lc0005_longest_palindromic_substring.md) - [lc0005_longest_palindromic_substring.cpp](problems/string/lc0005_longest_palindromic_substring.cpp)
 - [Interview. Implement atof](problems/string/interview_atof.md) - [interview_atof.cpp](problems/string/interview_atof.cpp)
+- [Interview. Validate IPv4](problems/string/interview_validate_ipv4.md) - [interview_validate_ipv4.cpp](problems/string/interview_validate_ipv4.cpp)
 
 ### Sorting / Heap
 
@@ -160,6 +167,7 @@ Problems are grouped by primary topic under `problems/`. Duplicate problem files
 - [225. Implement Stack using Queues](problems/stack_queue/lc0225_implement_stack_using_queues.md) - [lc0225_implement_stack_using_queues.cpp](problems/stack_queue/lc0225_implement_stack_using_queues.cpp)
 - [232. Implement Queue using Stacks](problems/stack_queue/lc0232_implement_queue_using_stacks.md) - [lc0232_implement_queue_using_stacks.cpp](problems/stack_queue/lc0232_implement_queue_using_stacks.cpp)
 - [933. Number of Recent Calls](problems/stack_queue/lc0933_number_of_recent_calls.md) - [lc0933_number_of_recent_calls.cpp](problems/stack_queue/lc0933_number_of_recent_calls.cpp)
+- [Interview. Nested Bracket Rules](problems/stack_queue/interview_nested_bracket_rules.md) - [interview_nested_bracket_rules.cpp](problems/stack_queue/interview_nested_bracket_rules.cpp)
 
 ### Two Pointers
 

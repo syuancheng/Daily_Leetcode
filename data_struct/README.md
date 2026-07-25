@@ -19,5 +19,7 @@ notes and problem-solving tips in `cpp_notes/`.
 - [Backtracking search shapes](backtracking/backtracking_search_shapes.cpp):
   compare choose/permutation templates across distinct values, duplicate values,
   and reusable values.
+- [Binary number generation](backtracking/binary_number_generation.cpp):
+  generate every length-`n` binary string with the standard choose/undo pattern.
 - [Permutations with repetition](backtracking/permutations_with_repetition.cpp):
   generate length-`k` sequences where each position can reuse any input value.
