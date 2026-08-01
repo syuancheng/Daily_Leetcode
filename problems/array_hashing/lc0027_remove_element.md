@@ -7,8 +7,8 @@
 
 ## Mastery
 
-- Attempts: OO
-- Status: Proficient
+- Attempts: OOH
+- Status: Familiar
 
 ## Link
 
@@ -21,23 +21,26 @@ Remove all occurrences of a value in-place and return the remaining length.
 ## My Solution
 
 ```cpp
-#include <iostream>
-#include <vector>
-
-int removeElement(std::vector<int> &nums, int val) {
-  int slow = 0;
-  for (int fast = 0; fast < nums.size(); fast++) {
-    if (nums[fast != val]) {
-      nums[slow++] = nums[fast];
+class Solution {
+public:
+  int removeElement(vector<int> &nums, int val) {
+    if (nums.empty()) {
+      return 0;
     }
-  }
-  return slow;
-}
 
-int removeElementv2(std::vector<int> &nums, int val) {
-  nums.erase(remove(nums.begin(), nums.end(), val), nums.end());
-  return nums.size();
-}
+    int slow = 0, fast = 0;
+    while (fast < nums.size()) {
+      if (nums[fast] != val) {
+        nums[slow] = nums[fast];
+        slow++;
+      }
+
+      fast++;
+    }
+
+    return slow;
+  }
+};
 ```
 
 ## Complexity
