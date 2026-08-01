@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: OOH
+- Attempts: OOHH
 - Status: Familiar
 
 ## Link
@@ -29,49 +29,48 @@ Find the smallest substring of s containing all characters of t.
 
 using namespace std;
 
-/**
-76. 最小覆盖子串
-*/
-
 class Solution {
 public:
-  bool check(vector<int> &flag, vector<int> &test) {
-    if (flag.size() != test.size()) {
-      return false;
-    }
-
-    for (int i = 0; i < flag.size(); i++) {
-      if (test[i] < flag[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  // s = abc, t=a
-
   string minWindow(string s, string t) {
-    vector<int> s_cnt(128), t_cnt(128);
-
-    for (const auto &e : t) {
-      t_cnt[e]++;
+    unordered_map<char, int> need, window;
+    for (char c : t) {
+      need[c]++;
     }
 
-    int len = INT_MAX, ansL = -1;
-    for (int l = 0, r = 0; r < s.size(); r++) {
-      auto &ch = s[r];
-      s_cnt[ch]++;
+    int left = 0, right = 0;
+    int valid = 0;
 
-      while (check(t_cnt, s_cnt) && l <= r) {
-        if (r - l + 1 < len) {
-          len = r - l + 1;
-          ansL = l;
+    int start = 0, len = INT_MAX;
+
+    while (right < s.size()) {
+      char c = s[right];
+      right++;
+
+      if (need.count(c)) {
+        window[c]++;
+        if (need[c] == window[c]) {
+          valid++;
         }
-        s_cnt[s[l]]--;
-        l++;
+      }
+
+      while (valid == need.size()) {
+        if (right - left < len) {
+          start = left;
+          len = right - left;
+        }
+
+        char d = s[left];
+        left++;
+        if (need.count(d)) {
+          if (need[d] == window[d]) {
+            valid--;
+          }
+          window[d]--;
+        }
       }
     }
-    return ansL == -1 ? string() : s.substr(ansL, len);
+
+    return len == INT_MAX ? "" : s.substr(start, len);
   }
 };
 ```
