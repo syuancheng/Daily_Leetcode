@@ -8,7 +8,7 @@
 
 ## Mastery
 
-- Attempts: OO
+- Attempts: OOO
 - Status: Proficient
 
 ## Link
@@ -30,38 +30,43 @@ Return all start indices of p anagrams in s.
 438. 找到字符串中所有字母异位词
 */
 
-using namespace std;
-
 class Solution {
 public:
   vector<int> findAnagrams(string s, string p) {
-    int s_len = s.size(), p_len = p.size();
-    if (s_len < p_len) {
-      return {};
+    vector<int> res;
+    unordered_map<char, int> need, window;
+    for (char c : p) {
+      need[c]++;
     }
 
-    vector<int> ans;
-    vector<int> s_count(26);
-    vector<int> p_count(26);
+    int left = 0, right = 0, valid = 0;
 
-    for (int i = 0; i < p_len; i++) {
-      s_count[s[i] - 'a']++;
-      p_count[p[i] - 'a']++;
-    }
+    while (right < s.size()) {
+      char c = s[right];
+      right++;
+      if (need.count(c)) {
+        window[c]++;
+        if (window[c] == need[c]) {
+          valid++;
+        }
+      }
 
-    if (s_count == p_count) {
-      ans.push_back(0);
-    }
+      while (right - left >= p.size()) {
+        if (valid == need.size()) {
+          res.push_back(left);
+        }
+        char d = s[left];
+        left++;
 
-    for (int i = 0; i < s_len - p_len; i++) {
-      s_count[s[i] - 'a']--;
-      s_count[s[i + p_len] - 'a']++;
-
-      if (s_count == p_count) {
-        ans.push_back(i+1);
+        if (need.count(d)) {
+          if (need[d] == window[d]) {
+            valid--;
+          }
+          window[d]--;
+        }
       }
     }
-    return ans;
+    return res;
   }
 };
 ```
