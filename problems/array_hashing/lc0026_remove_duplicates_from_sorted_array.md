@@ -7,7 +7,7 @@
 
 ## Mastery
 
-- Attempts: OOH
+- Attempts: OOHH
 - Status: Familiar
 
 ## Link
@@ -29,44 +29,22 @@ using namespace std;
 class Solution {
 public:
   int removeDuplicates(vector<int> &nums) {
-    unordered_set<int> tmps;
+    if (nums.empty()) {
+      return 0;
+    }
 
-    vector<int> ans;
-
-    for (size_t i = 0; i < nums.size(); i++) {
-      int val = nums.at(i);
-      if (tmps.count(val) == 0) {
-        ans.push_back(val);
-        tmps.insert(val);
+    int slow = 0, fast = 0;
+    while (fast < nums.size()) {
+      if (nums[slow] != nums[fast]) {
+        slow++;
+        nums[slow] = nums[fast];
       }
+      fast++;
     }
 
-    nums.swap(ans);
-    return nums.size();
+    return slow + 1;
   }
-
-  int removeDuplicatesV2(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 0) {
-            return 0;
-        }
-        int fast = 1, slow = 1;
-        while (fast < n) {
-            if (nums[fast] != nums[fast - 1]) {
-                nums[slow] = nums[fast];
-                ++slow;
-            }
-            ++fast;
-        }
-        return slow;
-    }
 };
-
-
-int main() {
-
-  return 0;
-}
 ```
 
 ## Complexity
