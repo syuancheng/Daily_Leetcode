@@ -7,8 +7,8 @@
 
 ## Mastery
 
-- Attempts: OOH
-- Status: Familiar
+- Attempts: OOHO
+- Status: Proficient
 
 ## Link
 
@@ -29,30 +29,27 @@ using namespace std;
 class Solution {
 public:
   void moveZeroes(vector<int> &nums) {
-    if (nums.size() < 2) {
-      return;
+    int i = removeElement(nums, 0);
+
+    while (i < nums.size()) {
+      nums[i++] = 0;
+    }
+  }
+
+  int removeElement(vector<int> &nums, int val) {
+    if (nums.empty()) {
+      return 0;
     }
 
-    int fast = 1;
-    for (int slow = 0; slow < nums.size(); slow++) {
-      if (fast >= nums.size()) {
-        break;
+    int slow = 0, fast = 0;
+    while (fast < nums.size()) {
+      if (nums[fast] != val) {
+        nums[slow] = nums[fast];
+        slow++;
       }
-      if (nums[slow] != 0) {
-        continue;
-      }
-      if (fast <= slow) {
-        fast = slow + 1;
-      }
-      while (fast < nums.size()) {
-        if (nums[fast] != 0) {
-          nums[slow] = nums[fast];
-          nums[fast++] = 0;
-          break;
-        }
-        fast++;
-      }
+      fast++;
     }
+    return slow;
   }
 };
 ```
