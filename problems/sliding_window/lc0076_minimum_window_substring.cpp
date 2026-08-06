@@ -1,6 +1,4 @@
-#include <climits>
 #include <string>
-#include <unordered_map>
 
 using namespace std;
 
@@ -11,6 +9,8 @@ using namespace std;
 class Solution {
 public:
   string minWindow(string s, string t) {
-    
+    (void)s;
+    (void)t;
+    return "";
   }
 };

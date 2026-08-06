@@ -7,8 +7,8 @@
 
 ## Mastery
 
-- Attempts: H
-- Status: Familiar
+- Attempts: HO
+- Status: Proficient
 
 ## Link
 
