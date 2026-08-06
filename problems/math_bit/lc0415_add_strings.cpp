@@ -1,26 +1,12 @@
-#include <string>
 #include <vector>
 
 using namespace std;
 
-/**
-415. 字符串相加
-示例 1：
-
-输入：num1 = "11", num2 = "123"
-输出："134"
-示例 2：
-
-输入：num1 = "456", num2 = "77"
-输出："533"
-示例 3：
-
-输入：num1 = "0", num2 = "0"
-输出："0"
-*/
-
 class Solution {
 public:
   string addStrings(string num1, string num2) {
+    (void)num1;
+    (void)num2;
+    return "";
   }
 };

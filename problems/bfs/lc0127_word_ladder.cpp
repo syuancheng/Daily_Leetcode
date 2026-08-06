@@ -1,6 +1,3 @@
-#include <queue>
-#include <string>
-#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -8,5 +5,9 @@ using namespace std;
 class Solution {
 public:
   int ladderLength(string beginWord, string endWord, vector<string> &wordList) {
+    (void)beginWord;
+    (void)endWord;
+    (void)wordList;
+    return 0;
   }
 };

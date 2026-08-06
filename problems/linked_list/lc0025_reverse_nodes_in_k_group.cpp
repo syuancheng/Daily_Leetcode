@@ -3,7 +3,8 @@
 class Solution {
 public:
   ListNode *reverseKGroup(ListNode *head, int k) {
+    (void)head;
     (void)k;
-    return head;
+    return nullptr;
   }
 };

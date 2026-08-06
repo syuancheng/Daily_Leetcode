@@ -3,5 +3,7 @@
 class Solution {
 public:
   ListNode *insertionSortList(ListNode *head) {
+    (void)head;
+    return nullptr;
   }
 };

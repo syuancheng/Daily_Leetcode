@@ -7,6 +7,8 @@ class Solution {
 
 public:
   vector<vector<int>> pathSum(TreeNode *root, int targetSum) {
-   
+    (void)root;
+    (void)targetSum;
+    return {};
   }
 };

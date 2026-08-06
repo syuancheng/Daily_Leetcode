@@ -1,37 +1,21 @@
-#include <stack>
 
 class MyQueue {
-private:
-  std::stack<int> inStack;
-  std::stack<int> outStack;
-
-  void moveInToOutIfNeeded() {
-    if (!outStack.empty()) {
-      return;
-    }
-
-    while (!inStack.empty()) {
-      outStack.push(inStack.top());
-      inStack.pop();
-    }
-  }
-
 public:
   MyQueue() = default;
 
-  void push(int x) { inStack.push(x); }
+  void push(int x) {
+    (void)x;
+  }
 
   int pop() {
-    moveInToOutIfNeeded();
-    const int result = outStack.top();
-    outStack.pop();
-    return result;
+    return 0;
   }
 
   int peek() {
-    moveInToOutIfNeeded();
-    return outStack.top();
+    return 0;
   }
 
-  bool empty() { return inStack.empty() && outStack.empty(); }
+  bool empty() {
+    return false;
+  }
 };

@@ -1,21 +1,25 @@
 #include "../common/nodes.h"
-#include <cstddef>
-#include <string>
 #include <sstream>
 
 using namespace std;
 
 class Codec {
 public:
-  // Encodes a tree to a single string.
+
   string serialize(TreeNode *root) {
+    (void)root;
+    return "";
   }
 
-  
+
   TreeNode* my_deserialize(istringstream& ss) {
+    (void)ss;
+    return nullptr;
   }
 
-  // Decodes your encoded data to tree.
+
   TreeNode *deserialize(string data) {
+    (void)data;
+    return nullptr;
   }
 };

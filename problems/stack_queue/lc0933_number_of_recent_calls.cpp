@@ -1,34 +1,22 @@
-#include <queue>
-#include <vector>
 
 class RecentCounter {
 public:
-  RecentCounter() {
-  }
+  RecentCounter() {}
 
   int ping(int t) {
+    (void)t;
+    return 0;
   };
 
-private:
-  std::vector<int> times;
 };
-
 
 class RecentCounterV2 {
 public:
-  RecentCounterV2() {
-  }
+  RecentCounterV2() {}
 
   int ping(int t) {
+    (void)t;
+    return 0;
   };
 
-private:
-  std::queue<int> times;
-
 };
-
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * RecentCounter* obj = new RecentCounter();
- * int param_1 = obj->ping(t);
- */

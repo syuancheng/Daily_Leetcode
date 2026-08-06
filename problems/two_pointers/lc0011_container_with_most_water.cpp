@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <vector>
 
 using namespace std;
@@ -6,5 +5,7 @@ using namespace std;
 class Solution {
 public:
   int maxArea(vector<int> &height) {
+    (void)height;
+    return 0;
   }
 };

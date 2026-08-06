@@ -1,35 +1,21 @@
-#include <cstddef>
-#include <queue>
 
 class MyStack {
-private:
-  std::queue<int> q;
-  int topElement = 0;
-
 public:
   MyStack() = default;
 
   void push(int x) {
-    q.push(x);
-    topElement = x;
+    (void)x;
   }
 
   int pop() {
-    const size_t rotateCount = q.size() - 1;
-    for (size_t i = 0; i < rotateCount; i++) {
-      q.push(q.front());
-      q.pop();
-    }
-
-    const int result = q.front();
-    q.pop();
-    if (!q.empty()) {
-      topElement = q.back();
-    }
-    return result;
+    return 0;
   }
 
-  int top() { return topElement; }
+  int top() {
+    return 0;
+  }
 
-  bool empty() { return q.empty(); }
+  bool empty() {
+    return false;
+  }
 };

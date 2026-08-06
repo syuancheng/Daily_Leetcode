@@ -1,13 +1,11 @@
-#include <iostream>
 #include <vector>
 
-
-//O(n3)
 int sumOddLengthSubarrays(std::vector<int> &arr) {
+  (void)arr;
+  return {};
 }
 
 int sumOddLengthSubarraysV2(std::vector<int> &arr) {
-}
-
-int main() {
+  (void)arr;
+  return 0;
 }

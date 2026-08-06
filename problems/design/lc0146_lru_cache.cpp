@@ -1,19 +1,14 @@
 class LRUCache {
 public:
-  LRUCache(int capacity) { (void)capacity; }
+  LRUCache(int capacity) {
+    (void)capacity;
+  }
   int get(int key) {
     (void)key;
-    return -1;
+    return 0;
   }
   void put(int key, int value) {
     (void)key;
     (void)value;
   }
 };
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache* obj = new LRUCache(capacity);
- * int param_1 = obj->get(key);
- * obj->put(key,value);
- */
