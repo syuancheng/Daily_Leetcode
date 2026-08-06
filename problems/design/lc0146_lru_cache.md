@@ -8,8 +8,8 @@
 
 ## Mastery
 
-- Attempts: OHHO
-- Status: Proficient
+- Attempts: OHHOH
+- Status: Familiar
 
 ## Link
 
@@ -22,83 +22,100 @@ Design an LRU cache supporting get and put in O(1) time.
 ## My Solution
 
 ```cpp
-#include <unordered_map>
-struct DLinkedNode {
+class Node {
+public:
   int key, value;
-  DLinkedNode *prev;
-  DLinkedNode *next;
+  Node *prev, *next;
+  Node(int k, int v) : key(k), value(v), prev(nullptr), next(nullptr) {}
+};
 
-  DLinkedNode() : key(0), value(0), prev(nullptr), next(nullptr) {}
-  DLinkedNode(int k, int n) : key(k), value(n), prev(nullptr), next(nullptr) {}
+class DoubleList {
+private:
+  Node *head;
+  Node *tail;
+
+  int size;
+
+public:
+  DoubleList() {
+    head = new Node(0, 0);
+    tail = new Node(0, 0);
+    head->next = tail;
+    tail->prev = head;
+    size = 0;
+  }
+
+  int getSize() { return size; }
+
+  void addLast(Node *x) {
+    x->prev = tail->prev;
+    x->next = tail;
+    tail->prev->next = x;
+    tail->prev = x;
+    size++;
+  }
+
+  void remove(Node *x) {
+    x->prev->next = x->next;
+    x->next->prev = x->prev;
+    size--;
+  }
+
+  Node *removeFirst() {
+    if (head->next == tail) {
+      return nullptr;
+    }
+
+    Node *first = head->next;
+    remove(first);
+    return first;
+  }
 };
 
 class LRUCache {
 private:
-  int capacity;
-  int size;
-  DLinkedNode *head;
-  DLinkedNode *tail;
-  std::unordered_map<int, DLinkedNode *> cache;
+  std::unordered_map<int, Node *> map;
+
+  DoubleList cache;
+
+  int cap;
 
 public:
-  LRUCache(int _capacity) : capacity(_capacity), size(0) {
-    head = new DLinkedNode();
-    tail = new DLinkedNode();
-    head->next = tail;
-    tail->prev = head;
-  }
+  LRUCache(int capacity) { cap = capacity; }
 
   int get(int key) {
-    if (cache.count(key) == 0) {
+    if (!map.count(key)) {
       return -1;
     }
-    DLinkedNode *node = cache[key];
-    moveToHead(node);
-    return node->value;
+
+    Node *n = map[key];
+
+    cache.remove(n);
+    cache.addLast(n);
+
+    return n->value;
   }
 
   void put(int key, int value) {
-    if (cache.count(key) == 0) {
-      DLinkedNode *node = new DLinkedNode(key, value);
-      cache[key] = node;
-      addToHead(node);
-      ++size;
-      if (size > capacity) {
-        DLinkedNode *removed = removeTail();
-        cache.erase(removed->key);
-        delete removed;
-        --size;
-      }
-    } else {
-      DLinkedNode *node = cache[key];
-      node->value = value;
-      moveToHead(node);
+    if (map.count(key)) {
+      Node *old = map[key];
+      cache.remove(old);
+      map.erase(key);
+      delete old;
     }
-  }
 
-  void addToHead(DLinkedNode *node) {
-    node->prev = head;
-    node->next = head->next;
-    head->next->prev = node;
-    head->next = node;
-  }
+    if (cache.getSize() == cap) {
+      Node *tmp = cache.removeFirst();
+      map.erase(tmp->key);
+      delete tmp;
+    }
 
-  void removeNode(DLinkedNode *node) {
-    node->prev->next = node->next;
-    node->next->prev = node->prev;
-  }
-
-  void moveToHead(DLinkedNode *node) {
-    removeNode(node);
-    addToHead(node);
-  }
-
-  DLinkedNode *removeTail() {
-    DLinkedNode *node = tail->prev;
-    removeNode(node);
-    return node;
+    Node *node = new Node(key, value);
+    cache.addLast(node);
+    map[key] = node;
   }
 };
+
 
 /**
  * Your LRUCache object will be instantiated and called as such:
