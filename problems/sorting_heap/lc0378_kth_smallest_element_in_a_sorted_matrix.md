@@ -11,6 +11,15 @@
 - Attempts: H
 - Status: Familiar
 
+## Practice Log
+
+Result options: `一次性做对` / `修改后做对` / `参考答案后做对`.
+
+- Date:
+  Duration:
+  Result:
+  Notes:
+
 ## Link
 
 https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/

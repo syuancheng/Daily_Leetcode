@@ -1,0 +1,3 @@
+display_name: LeetCode Review Prioritizer
+short_description: Prioritize LeetCode review from practice logs.
+default_prompt: Analyze my Daily_Leetcode practice logs and recommend the highest-priority problems to review next.

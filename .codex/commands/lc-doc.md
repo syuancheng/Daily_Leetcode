@@ -34,6 +34,7 @@ Workflow:
    - For `path/to/lc0199_right_side_view.cpp`, write `path/to/lc0199_right_side_view.md`.
    - Preserve the exact original source code in the Markdown `My Solution` section before modifying the `.cpp` file.
    - Preserve existing user-authored Markdown outside the generated writeup sections when updating.
+   - Preserve existing `Practice Log` entries when updating Markdown; initialize an empty hand-filled block for new files.
 
 5. Reset the original `.cpp` source file for future practice.
    - This is required by default after the Markdown writeup captures the answer.
@@ -68,6 +69,15 @@ Markdown format:
   - O: solved correctly
 - Status: <Beginner | Familiar | Proficient>
 
+## Practice Log
+
+Result options: `一次性做对` / `修改后做对` / `参考答案后做对`.
+
+- Date:
+  Duration:
+  Result:
+  Notes:
+
 ## Link
 
 https://leetcode.com/problems/<slug>/
@@ -93,6 +103,7 @@ Quality bar:
 - Use clear, natural English.
 - Include labels such as `Array`, `Hash Table`, `Two Pointers`, `Binary Search`, `Dynamic Programming`, `Linked List`, `Tree`, `Graph`, `BFS`, `DFS`, `Backtracking`, `Stack`, `Queue`, `Heap`, `Greedy`, or `Sliding Window`.
 - Use the Mastery mapping exactly: `X -> Beginner`, `H -> Familiar`, `O -> Proficient`; for a sequence, the status follows the final/latest symbol.
+- Preserve existing `Practice Log` entries exactly when refreshing a writeup, and do not convert them into a table.
 - The Markdown must contain the complete original solution before the `.cpp` file is reset.
 - Include only the sections above unless the user explicitly asks for review or corrected code.
 - Keep edits limited to the Markdown writeup, README index, and resetting the requested `.cpp` file.
